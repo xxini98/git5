@@ -1,5 +1,8 @@
+<!-- 문서의 형식 선언(HTML5) -->
 <!DOCTYPE html>
+<!-- 한국어 : ko -->
 <html lang="ko">
+    <!-- head : 페이지설정 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +15,60 @@
     <meta name="twitter:title" content="네이버">
     <meta name="twitter:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
     <meta name="twitter:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+    <!-- 파비콘 설정 -->
     <link rel="icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
+
+    <!-- Internal CSS -->
+    <style>
+        header {
+            border-bottom: 3px solid tomato;
+        }
+    </style>
+    <!-- External CSS : 이거 사용 -->
+    <link rel="stylesheet" href="./css/comm.css">
+
 </head>
 <body>
-    
+    <div>
+        <h1>글씨 태그</h1>
+        <header>
+            <h2>header 태그</h2>
+        </header>
+        <section>
+            <h1>h1 태그 : 가장 중요한 타이틀</h1>
+            <h2>h2 태그 : 두번째로 중요한 타이틀</h2>
+            <h3>h3 태그 : 세번째로 중요한 타이틀</h3>
+        </section>
+        <hr>
+        <header>
+            <h2>p 태그</h2>
+        </header>
+        <section>
+            <p>최근 전세시장은 2020년 7월 31일 계약갱신청구권·전월세 상한제 등 '임대차 2법' 시행 이후 4년 치 전셋값을 한꺼번에 받으려는 집주인들로 인해 가격이 단기간에 폭등했다가, 지난해 금리 인상 본격화로 집값과 전셋값이 동반 하락하며 1년 가까이 역전세난이 지속되고 있다. </p>
+        </section>
+
+        <hr>
+        <header>
+            <h2>텍스트 서식</h2>
+        </header>
+        <section>
+            - b 태그 : 일반 <b>볼드체</b> <br>
+            - strong 태그 : <strong>중요한</strong> 텍스트 <br>
+            - i 태그 : <i>기술 용어, 구문</i> <br>
+            - em 태그 : <em>강조 텍스트</em> <br>
+            - mark 태그 : <mark>디자인적으로 강조 텍스트</mark> <br>
+            - address 태그 : <address>연락처 정보를 위한 텍스트</address>
+        </section>
+
+        <header>
+            <h2>link 태그</h2>
+        </header>
+        <section>
+            <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">HTML Link</a>
+        </section>
+    </div>
+    <!-- 주석태그 --> 
+    <!-- <p>안녕 반가워.</p> -->
+    <p>안녕<!--  반가워. --></p>
 </body>
 </html>
