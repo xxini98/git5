@@ -64,7 +64,80 @@
             <h2>link 태그</h2>
         </header>
         <section>
-            <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">HTML Link</a>
+            <!-- 절대경로 -->
+            <a href="https://naver.com" target="_blank">HTML Link</a>
+            <!-- 상대경로 -->
+            <a href="./01-layout.html">layout.html</a>
+            <a href="./images/01-01-daisy-w.jpeg">daisy image</a>
+            <a href="images/01-01-daisy-w.jpeg">daisy image2</a>
+            <a href="mailto:sapire980814@naver.com">sapire980814@naver.com</a>
+            <!-- 웹접근성 -->
+            <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
+            <a href="#main">main 바로가기</a>
+            <a href="./sub/sub.html#sec2">sub.html > id 값이 sec2 바로가기</a>
+        </section>
+
+        <header>
+            <h2>iamges 태그</h2>
+        </header>
+        <section>
+            <!-- 상대경로 -->
+            <!-- 이미지 넣고 싶을 댄 img 값 넣어주고, alt에는 이미지 이름 작성하기 style 따로 안 넣으면 width나 height 넣기 -->
+            <!-- width, height 속성에는 단위 생략 / 이미지를 자르는 한이 있더라도 가로세로비율 지키기 (or 가로 비율만 입력하면 자동으로 세로 비율은 맞춰짐)-->
+            <img src="./images/01-01-daisy-w.jpeg" alt="daisy" width="200" height="200">
+            <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;"> 
+            <!-- 절대경로   --> 
+            <a href="https://www.lottecastle.co.kr/APT/AT00174/main/index.do" target="_blank" title="새창열림">
+                <img src="https://ssl.pstatic.net/melona/libs/1452/1452112/b0669cb21eced3305261_20230531144759087.jpg" alt="역시 청량리, 결국 롯데캐슬 청량리 롯데캐슬 하이루체 6월 OPEN 예정 LOTTE CASTLE 1899-9882" width="100%">
+            </a>
+            <!-- width 100%하면 창 크기에 따라서 이미지가 변화가 됨 / 이벤트 -->
+
+            <!-- 반응형 이미지 -->
+            <picture>
+                <!-- width가 650px 이상일 경우 음식 이미지가 보인다. -->
+                <source media="(min-width: 650px)" srcset="images\img_food.jpg">
+                <!-- width가 465px 이상일 경우 자동차 이미지가 보인다. -->
+                <source media="(min-width: 465px)" srcset="./images/img_car.jpg">
+                <img src="./images/img_girl.jpg" alt="뒷통수 아줌마" width="100%">
+            </picture>
+        </section>
+
+        <header>
+            <h2>table 태그</h2>
+        </header>
+        <section>
+            <table>
+                <caption>테이블 설명 : 자세한 설명</caption>
+                <colgroup>
+                    <col width="40%">
+                    <col span="3">
+                </colgroup>
+                <thead>
+
+
+                    
+                </thead>
+            </table>
+        </section>
+
+        <!-- section 넣고 h1 넣기! (사이에 이름 넣기 ex.main) 그 다음 p 입력한 다음 자신이 원하는 문구 넣거나 lorem 넣어서 예시문구 작성하기 -->
+        <!-- 바로가기 만들고 싶으면 a 태그 넣어서 <h>에 넣은 이름을 #해서 넣기(ex.#main) 그 다음 버튼 이름 넣기(ex.main 바로가기) 그리고 main section으로 가서 <section>을 <scetion id="main"으로 변경하기 -->
+        <section id="nav">
+            <h2>nav</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
+        </section>
+        <section>
+            <h2>c1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
+        </section>
+        <section>
+            <h2>c1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
+        </section>
+        <section id="main">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
+            <a href="#nav">nav 바로가기</a>
         </section>
     </div>
     <!-- 주석태그 --> 
