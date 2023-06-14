@@ -109,58 +109,71 @@
             <table>
                 <!-- 웹전근성때문에 무조건 추가 -->
                 <caption>테이블 설명 : 자세한 설명</caption>
+                <!-- colgroup은 열의 가로 사이즈 col의 갯수만큼 넣어줘야한다. 지금은 아래의 것은 총 7개 -->
                 <colgroup>
-                    <col width="40%">
-                    <col span="3"> 
+                    <col>
+                    <col width="20%">
+                    <col span="5" width="10%">
                 </colgroup>
-                <!-- tr이 열 td가 행 thead는 목록 작성(?)하는 것 같은 헤드라인, tfoot은  -->
+
+                <!-- tr이 열 td가 행 thead는 테이블의 주제or구분 / colspan 이나 rowspan은 행이나 열을 먹는다라고 생각하기. -->
                 <thead>
                     <tr>
-                        <td>이름</td>
-                        <td>국어</td>
-                        <td>영어</td>
-                        <td>수학</td>
+                        <th scope="col" rowspan="2" colspan="2">과목</th>
+                        <th scope="col" colspan="5">1학년 1반</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">다니엘</th>
+                        <th scope="col">하니</th>
+                        <th scope="col">민지</th>
+                        <th scope="col">해인</th>
+                        <th scope="col">혜린</th>
                     </tr>
                 </thead>
+                <!-- tbody는 테이블의 본문 -->
                 <tbody>
                     <tr>
-                        <td>다니엘</td>
-                        <td>열</td>
-                        <td>열</td>
-                        <td>열</td>
+                        <th scope="row" rowspan="3">공통</th>
+                        <th scope="row">국어</th>
+                        <td>100</td>
+                        <td>50</td>
+                        <td>40</td>
+                        <td>40</td>
+                        <td>40</td>
                     </tr>
                     <tr>
-                        <td>하니</td>
-                        <td>열</td>
-                        <td>열</td>
-                        <td>열</td>
+                        <th scope="row">수학</th>
+                        <td>90</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>80</td>
+                        <td>80</td>
                     </tr>
                     <tr>
-                        <td>민지</td>
-                        <td>열</td>
-                        <td>열</td>
-                        <td>열</td>
-                    </tr>
-                    <tr>
-                        <td>해린</td>
-                        <td>열</td>
-                        <td>열</td>
-                        <td>열</td>
+                        <th scope="row">영어</th>
+                        <td>80</td>
+                        <td>30</td>
+                        <td>90</td>
+                        <td>90</td>
+                        <td>90</td>
                     </tr>
                 </tbody>
+                <!-- 테이블의 요약 -->
                 <tfoot>
                     <tr>
-                        <td>열</td>
-                        <td>열</td>
-                        <td>열</td>
-                        <td>열</td>
+                        <th scope="row" colspan="2">평균</th>
+                        <td>90</td>
+                        <td>50</td>
+                        <td>80</td>
+                        <td>40</td>
+                        <td>20</td>
                     </tr>
                 </tfoot>
             </table>
         </section>
         <!-- 디자인할때만 STYLE 사용! / 중괄호는 STYLE에서만 사용한다. / 근데 보통은 CSS에서 사용한다. -->
         <style>
-            table, tr, td {
+            table, tr, td, th {
                 border: 1px solid #ff0000;
             }
             table {
@@ -169,7 +182,150 @@
             td {
                 height: 100px;
             }
+            thead {
+                background: #ffbb00;
+            }
+            tfoot {
+                background: #cacaca;
+            }
         </style>
+
+        <header>
+            <h2>List 태그</h2>
+        </header>
+        <section>
+            <h3>좋아하는 음식</h3>
+            <!-- 순서 없는 목록 -->
+            <ul>
+                <li>개</li>
+                <li>고양이</li>
+                <li>물고기</li>
+            </ul>
+
+            <!-- 순서가 있는 목록 -->
+            <ol>
+                <li>고양이</li>
+                <li>물고기</li>
+                <li>개</li>
+            </ol>
+
+            <!-- nav -->
+            <h3>메인메뉴</h3>
+            <!-- depth1   -->
+            <ul>
+                <li>
+                    탑 
+                    <!-- depth2 -->
+                    <ul>
+                        <li>
+                            블라우스
+                            <ul>
+                                <li>depth3</li>
+                                <li>depth3</li>
+                                <li>depth3</li>
+                            </ul>
+                        </li>
+                        <li>티</li>
+                        <li>셔츠</li>
+                        <li>니트</li>
+                    </ul>
+                </li>
+                <li>
+                    아우터
+                    <!-- depth2 -->
+                    <ul>
+                        <li>자켓</li>
+                        <li>코트</li>
+                        <li>
+                            가디건
+                            <ul>
+                                <li>depth3</li>
+                                <li>depth3</li>
+                                <li>depth3</li>
+                            </ul>
+                        </li>
+                        <li>머플러</li>
+                    </ul>
+                </li>
+                <li>
+                    팬츠
+                    <!-- depth2 -->
+                    <ul>
+                        <li>청바지</li>
+                        <li>짧은바지</li>
+                        <li>긴바지</li>
+                        <li>레깅스</li>
+                    </ul>
+                </li>
+                <li>
+                    악세서리
+                    <!-- depth2 -->
+                    <ul>
+                        <li>귀걸이</li>
+                        <li>목걸이</li>
+                        <li>반지</li>
+                        <li>팔찌</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#">depth1</a>
+                    <ul>
+                        <li>
+                            <a href="#">depth2</a>
+                            <ul>
+                                <li>
+                                    <a href="#">depth3</a>
+                                </li>
+                                <li>
+                                    <a href="#">depth3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">depth2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">depth1</a>
+                    <ul>
+                        <li>
+                            <a href="#">depth2</a>
+                        </li>
+                        <li>
+                            <a href="#">depth2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">depth1</a>
+                    <ul>
+                        <li>
+                            <a href="#">depth2</a>
+                        </li>
+                        <li>
+                            <a href="#">depth2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">depth1</a>
+                    <ul>
+                        <li>
+                            <a href="#">depth2</a>
+                        </li>
+                        <li>
+                            <a href="3">depth2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+
 
         <!-- section 넣고 h1 넣기! (사이에 이름 넣기 ex.main) 그 다음 p 입력한 다음 자신이 원하는 문구 넣거나 lorem 넣어서 예시문구 작성하기 -->
         <!-- 바로가기 만들고 싶으면 a 태그 넣어서 <h>에 넣은 이름을 #해서 넣기(ex.#main) 그 다음 버튼 이름 넣기(ex.main 바로가기) 그리고 main section으로 가서 <section>을 <scetion id="main"으로 변경하기 -->
