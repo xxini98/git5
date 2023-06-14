@@ -107,18 +107,69 @@
         </header>
         <section>
             <table>
+                <!-- 웹전근성때문에 무조건 추가 -->
                 <caption>테이블 설명 : 자세한 설명</caption>
                 <colgroup>
                     <col width="40%">
-                    <col span="3">
+                    <col span="3"> 
                 </colgroup>
+                <!-- tr이 열 td가 행 thead는 목록 작성(?)하는 것 같은 헤드라인, tfoot은  -->
                 <thead>
-
-
-
+                    <tr>
+                        <td>이름</td>
+                        <td>국어</td>
+                        <td>영어</td>
+                        <td>수학</td>
+                    </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>다니엘</td>
+                        <td>열</td>
+                        <td>열</td>
+                        <td>열</td>
+                    </tr>
+                    <tr>
+                        <td>하니</td>
+                        <td>열</td>
+                        <td>열</td>
+                        <td>열</td>
+                    </tr>
+                    <tr>
+                        <td>민지</td>
+                        <td>열</td>
+                        <td>열</td>
+                        <td>열</td>
+                    </tr>
+                    <tr>
+                        <td>해린</td>
+                        <td>열</td>
+                        <td>열</td>
+                        <td>열</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>열</td>
+                        <td>열</td>
+                        <td>열</td>
+                        <td>열</td>
+                    </tr>
+                </tfoot>
             </table>
         </section>
+        <!-- 디자인할때만 STYLE 사용! / 중괄호는 STYLE에서만 사용한다. / 근데 보통은 CSS에서 사용한다. -->
+        <style>
+            table, tr, td {
+                border: 1px solid #ff0000;
+            }
+            table {
+                width: 100%
+            }
+            td {
+                height: 100px;
+            }
+        </style>
 
         <!-- section 넣고 h1 넣기! (사이에 이름 넣기 ex.main) 그 다음 p 입력한 다음 자신이 원하는 문구 넣거나 lorem 넣어서 예시문구 작성하기 -->
         <!-- 바로가기 만들고 싶으면 a 태그 넣어서 <h>에 넣은 이름을 #해서 넣기(ex.#main) 그 다음 버튼 이름 넣기(ex.main 바로가기) 그리고 main section으로 가서 <section>을 <scetion id="main"으로 변경하기 -->
