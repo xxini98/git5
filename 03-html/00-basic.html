@@ -327,8 +327,76 @@
             </ul>
         </section>
 
+        <header>
+            <h2>dl, dt, dd 태그</h2>
+        </header>
+        <section>
+            <dl>
+                <dt>이름</dt>
+                <dd>설명</dd>
+                <dt>이름</dt>
+                <dd>설명</dd>
+            </dl>
+
+            <dl>
+                <dt>이름</dt>
+                <dd>설명</dd>
+            </dl>
+            <dl>
+                <dt>이름</dt>
+                <dd>설명</dd>
+            </dl>
+            </section>
+
+            <header>
+                <h2>block,inline</h2>
+            </header>
+            <section>
+                <ul>
+                    <li>
+                        block
+                        <div style="border: 1px solid red;">div</div>
+                        <div style="border: 1px solid red;">div2</div>
+                        <section style="border: 1px solid red;">section</section>
+                        <header style="border: 1px solid red;">section</header>
+                    </li>
+                </ul>
+            </section>
+
+            <header>
+                <h2>class</h2>
+            </header>
+            <section>
+                <div class="wrap">
+                    <div class="section sec1">1</div>
+                    <div class="section sec2">2</div>
+                    <div class="section sec3">3</div>
+                </div>
 
 
+                <!-- 스타일 값은 무조건 중괄호 사용하기 -->
+                <style>
+                    .wrap {
+                            border: 5px solid #7700ff;
+                            background: #ffe600;
+                    }
+                    .section {
+                        border: 4px solid orange;
+                    }
+                    .sec1 {
+                        background: greenyellow;
+                    }
+                    .sec2 {
+                        background: peachpuff;
+                    }
+                    .sec3 {
+                        background: skyblue;
+                    }
+                </style>
+            </section>
+
+            <!-- class 중복이 되는 애들 / id 중복이 되지 않는 애들 디자인을 넣을 때에는 class을 넣고  아이디는 보통 개발자들이 사용한다. 공적인 요소나 서버에 뭔가를 받아오거나 퍼블리싱(html,css) 하면 class만 사용하기 한 페이지 동일한 id값이 2개 이상이면 오류가 난다. 웹디자인 기능사는 css까지로만 작업한다.-->
+            
         <!-- section 넣고 h1 넣기! (사이에 이름 넣기 ex.main) 그 다음 p 입력한 다음 자신이 원하는 문구 넣거나 lorem 넣어서 예시문구 작성하기 -->
         <!-- 바로가기 만들고 싶으면 a 태그 넣어서 <h>에 넣은 이름을 #해서 넣기(ex.#main) 그 다음 버튼 이름 넣기(ex.main 바로가기) 그리고 main section으로 가서 <section>을 <scetion id="main"으로 변경하기 -->
         <section id="nav">
