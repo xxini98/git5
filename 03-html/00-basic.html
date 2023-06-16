@@ -2,424 +2,503 @@
 <!DOCTYPE html>
 <!-- 한국어 : ko -->
 <html lang="ko">
-    <!-- head : 페이지설정 -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- head : 페이지설정 -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naver</title>
-    <meta property="og:title" content="네이버">
-    <meta property="og:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
-    <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
-    <meta property="og:url" content="http://www.naver.com/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="네이버">
-    <meta name="twitter:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
-    <meta name="twitter:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+    <meta property="og:title" content="네이버" />
+    <meta
+      property="og:description"
+      content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
+    />
+    <meta
+      property="og:image"
+      content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png"
+    />
+    <meta property="og:url" content="http://www.naver.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="네이버" />
+    <meta
+      name="twitter:description"
+      content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
+    />
+    <meta
+      name="twitter:image"
+      content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png"
+    />
     <!-- 파비콘 설정 -->
-    <link rel="icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.naver.com/favicon.ico?1"
+    />
 
     <!-- Internal CSS -->
     <style>
-        header {
-            border-bottom: 3px solid tomato;
-        }
+      header {
+        border-bottom: 3px solid tomato;
+      }
     </style>
     <!-- External CSS : 이거 사용 -->
-    <link rel="stylesheet" href="./css/comm.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="./css/comm.css" />
+    <!-- External js : 이걸 사용 -->
+    <!-- jQuery 라이브러리 : jQuery 파일은 절대 건들지 말기!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/comm.js"></script>
+  </head>
+  <body>
     <div>
-        <h1>글씨 태그</h1>
-        <header>
-            <h2>header 태그</h2>
-        </header>
-        <section>
-            <h1>h1 태그 : 가장 중요한 타이틀</h1>
-            <h2>h2 태그 : 두번째로 중요한 타이틀</h2>
-            <h3>h3 태그 : 세번째로 중요한 타이틀</h3>
-        </section>
-        <hr>
-        <header>
-            <h2>p 태그</h2>
-        </header>
-        <section>
-            <p>최근 전세시장은 2020년 7월 31일 계약갱신청구권·전월세 상한제 등 '임대차 2법' 시행 이후 4년 치 전셋값을 한꺼번에 받으려는 집주인들로 인해 가격이 단기간에 폭등했다가, 지난해 금리 인상 본격화로 집값과 전셋값이 동반 하락하며 1년 가까이 역전세난이 지속되고 있다. </p>
-        </section>
+      <h1>글씨 태그</h1>
+      <header>
+        <h2>header 태그</h2>
+      </header>
+      <section>
+        <h1>h1 태그 : 가장 중요한 타이틀</h1>
+        <h2>h2 태그 : 두번째로 중요한 타이틀</h2>
+        <h3>h3 태그 : 세번째로 중요한 타이틀</h3>
+      </section>
+      <hr />
+      <header>
+        <h2>p 태그</h2>
+      </header>
+      <section>
+        <p>
+          최근 전세시장은 2020년 7월 31일 계약갱신청구권·전월세 상한제 등
+          '임대차 2법' 시행 이후 4년 치 전셋값을 한꺼번에 받으려는 집주인들로
+          인해 가격이 단기간에 폭등했다가, 지난해 금리 인상 본격화로 집값과
+          전셋값이 동반 하락하며 1년 가까이 역전세난이 지속되고 있다.
+        </p>
+      </section>
 
-        <hr>
-        <header>
-            <h2>텍스트 서식</h2>
-        </header>
-        <section>
-            - b 태그 : 일반 <b>볼드체</b> <br>
-            - strong 태그 : <strong>중요한</strong> 텍스트 <br>
-            - i 태그 : <i>기술 용어, 구문</i> <br>
-            - em 태그 : <em>강조 텍스트</em> <br>
-            - mark 태그 : <mark>디자인적으로 강조 텍스트</mark> <br>
-            - address 태그 : <address>연락처 정보를 위한 텍스트</address>
-        </section>
+      <hr />
+      <header>
+        <h2>텍스트 서식</h2>
+      </header>
+      <section>
+        - b 태그 : 일반 <b>볼드체</b> <br />
+        - strong 태그 : <strong>중요한</strong> 텍스트 <br />
+        - i 태그 : <i>기술 용어, 구문</i> <br />
+        - em 태그 : <em>강조 텍스트</em> <br />
+        - mark 태그 : <mark>디자인적으로 강조 텍스트</mark> <br />
+        - address 태그 :
+        <address>연락처 정보를 위한 텍스트</address>
+      </section>
 
-        <header>
-            <h2>link 태그</h2>
-        </header>
-        <section>
-            <!-- 절대경로 -->
-            <a href="https://naver.com" target="_blank">HTML Link</a>
-            <!-- 상대경로 -->
-            <a href="./01-layout.html">layout.html</a>
-            <a href="./images/01-01-daisy-w.jpeg">daisy image</a>
-            <a href="images/01-01-daisy-w.jpeg">daisy image2</a>
-            <a href="mailto:sapire980814@naver.com">sapire980814@naver.com</a>
-            <!-- 웹접근성 -->
-            <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
-            <a href="#main">main 바로가기</a>
-            <a href="./sub/sub.html#sec2">sub.html > id 값이 sec2 바로가기</a>
-        </section>
+      <header>
+        <h2>link 태그</h2>
+      </header>
+      <section>
+        <!-- 절대경로 -->
+        <a href="https://naver.com" target="_blank">HTML Link</a>
+        <!-- 상대경로 -->
+        <a href="./01-layout.html">layout.html</a>
+        <a href="./images/01-01-daisy-w.jpeg">daisy image</a>
+        <a href="images/01-01-daisy-w.jpeg">daisy image2</a>
+        <a href="mailto:sapire980814@naver.com">sapire980814@naver.com</a>
+        <!-- 웹접근성 -->
+        <a href="https://www.naver.com" target="_blank" title="새창열림"
+          >네이버</a
+        >
+        <a href="#main">main 바로가기</a>
+        <a href="./sub/sub.html#sec2">sub.html > id 값이 sec2 바로가기</a>
+      </section>
 
-        <header>
-            <h2>iamges 태그</h2>
-        </header>
-        <section>
-            <!-- 상대경로 -->
-            <!-- 이미지 넣고 싶을 댄 img 값 넣어주고, alt에는 이미지 이름 작성하기 style 따로 안 넣으면 width나 height 넣기 -->
-            <!-- width, height 속성에는 단위 생략 / 이미지를 자르는 한이 있더라도 가로세로비율 지키기 (or 가로 비율만 입력하면 자동으로 세로 비율은 맞춰짐)-->
-            <img src="./images/01-01-daisy-w.jpeg" alt="daisy" width="200" height="200">
-            <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;"> 
-            <!-- 절대경로   --> 
-            <a href="https://www.lottecastle.co.kr/APT/AT00174/main/index.do" target="_blank" title="새창열림">
-                <img src="https://ssl.pstatic.net/melona/libs/1452/1452112/b0669cb21eced3305261_20230531144759087.jpg" alt="역시 청량리, 결국 롯데캐슬 청량리 롯데캐슬 하이루체 6월 OPEN 예정 LOTTE CASTLE 1899-9882" width="100%">
-            </a>
-            <!-- width 100%하면 창 크기에 따라서 이미지가 변화가 됨 / 이벤트 -->
-<!-- 조심하기! -->
-            <!-- 반응형 이미지 -->
-            <picture>
-                <!-- width가 650px 이상일 경우 음식 이미지가 보인다. -->
-                <source media="(min-width: 650px)" srcset="images\img_food.jpg">
-                <!-- width가 465px 이상일 경우 자동차 이미지가 보인다. -->
-                <source media="(min-width: 465px)" srcset="./images/img_car.jpg">
-                <img src="./images/img_girl.jpg" alt="뒷통수 아줌마" width="100%">
-            </picture>
-        </section>
+      <header>
+        <h2>iamges 태그</h2>
+      </header>
+      <section>
+        <!-- 상대경로 -->
+        <!-- 이미지 넣고 싶을 댄 img 값 넣어주고, alt에는 이미지 이름 작성하기 style 따로 안 넣으면 width나 height 넣기 -->
+        <!-- width, height 속성에는 단위 생략 / 이미지를 자르는 한이 있더라도 가로세로비율 지키기 (or 가로 비율만 입력하면 자동으로 세로 비율은 맞춰짐)-->
+        <img
+          src="./images/01-01-daisy-w.jpeg"
+          alt="daisy"
+          width="200"
+          height="200"
+        />
+        <img
+          src="./images/01-01-daisy-w.jpeg"
+          alt="daisy"
+          style="width: 300px"
+        />
+        <!-- 절대경로   -->
+        <a
+          href="https://www.lottecastle.co.kr/APT/AT00174/main/index.do"
+          target="_blank"
+          title="새창열림"
+        >
+          <img
+            src="https://ssl.pstatic.net/melona/libs/1452/1452112/b0669cb21eced3305261_20230531144759087.jpg"
+            alt="역시 청량리, 결국 롯데캐슬 청량리 롯데캐슬 하이루체 6월 OPEN 예정 LOTTE CASTLE 1899-9882"
+            width="100%"
+          />
+        </a>
+        <!-- width 100%하면 창 크기에 따라서 이미지가 변화가 됨 / 이벤트 -->
+        <!-- 조심하기! -->
+        <!-- 반응형 이미지 -->
+        <picture>
+          <!-- width가 650px 이상일 경우 음식 이미지가 보인다. -->
+          <source media="(min-width: 650px)" srcset="images\img_food.jpg" />
+          <!-- width가 465px 이상일 경우 자동차 이미지가 보인다. -->
+          <source media="(min-width: 465px)" srcset="./images/img_car.jpg" />
+          <img src="./images/img_girl.jpg" alt="뒷통수 아줌마" width="100%" />
+        </picture>
+      </section>
 
-        <header>
-            <h2>table 태그</h2>
-        </header>
-        <section>
-            <table>
-                <!-- 웹전근성때문에 무조건 추가 -->
-                <caption>테이블 설명 : 자세한 설명</caption>
-                <!-- colgroup은 열의 가로 사이즈 col의 갯수만큼 넣어줘야한다. 지금은 아래의 것은 총 7개 -->
-                <colgroup>
-                    <col>
-                    <col width="20%">
-                    <col span="5" width="10%">
-                </colgroup>
+      <header>
+        <h2>table 태그</h2>
+      </header>
+      <section>
+        <table>
+          <!-- 웹전근성때문에 무조건 추가 -->
+          <caption>
+            테이블 설명 : 자세한 설명
+          </caption>
+          <!-- colgroup은 열의 가로 사이즈 col의 갯수만큼 넣어줘야한다. 지금은 아래의 것은 총 7개 -->
+          <colgroup>
+            <col />
+            <col width="20%" />
+            <col span="5" width="10%" />
+          </colgroup>
 
-                <!-- tr이 열 td가 행 thead는 테이블의 주제or구분 / colspan 이나 rowspan은 행이나 열을 먹는다라고 생각하기. -->
-                <thead>
-                    <tr>
-                        <th scope="col" rowspan="2" colspan="2">과목</th>
-                        <th scope="col" colspan="5">1학년 1반</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">다니엘</th>
-                        <th scope="col">하니</th>
-                        <th scope="col">민지</th>
-                        <th scope="col">해인</th>
-                        <th scope="col">혜린</th>
-                    </tr>
-                </thead>
-                <!-- tbody는 테이블의 본문 -->
-                <tbody>
-                    <tr>
-                        <th scope="row" rowspan="3">공통</th>
-                        <th scope="row">국어</th>
-                        <td>100</td>
-                        <td>50</td>
-                        <td>40</td>
-                        <td>40</td>
-                        <td>40</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">수학</th>
-                        <td>90</td>
-                        <td>40</td>
-                        <td>80</td>
-                        <td>80</td>
-                        <td>80</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">영어</th>
-                        <td>80</td>
-                        <td>30</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                    </tr>
-                </tbody>
-                <!-- 테이블의 요약 -->
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="2">평균</th>
-                        <td>90</td>
-                        <td>50</td>
-                        <td>80</td>
-                        <td>40</td>
-                        <td>20</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-        <!-- 디자인할때만 STYLE 사용! / 중괄호는 STYLE에서만 사용한다. / 근데 보통은 CSS에서 사용한다. -->
-        <style>
-            table, tr, td, th {
-                border: 1px solid #ff0000;
-            }
-            table {
-                width: 100%
-            }
-            td {
-                height: 100px;
-            }
-            thead {
-                background: #ffbb00;
-            }
-            tfoot {
-                background: #cacaca;
-            }
-        </style>
+          <!-- tr이 열 td가 행 thead는 테이블의 주제or구분 / colspan 이나 rowspan은 행이나 열을 먹는다라고 생각하기. -->
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2" colspan="2">과목</th>
+              <th scope="col" colspan="5">1학년 1반</th>
+            </tr>
+            <tr>
+              <th scope="col">다니엘</th>
+              <th scope="col">하니</th>
+              <th scope="col">민지</th>
+              <th scope="col">해인</th>
+              <th scope="col">혜린</th>
+            </tr>
+          </thead>
+          <!-- tbody는 테이블의 본문 -->
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="3">공통</th>
+              <th scope="row">국어</th>
+              <td>100</td>
+              <td>50</td>
+              <td>40</td>
+              <td>40</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <th scope="row">수학</th>
+              <td>90</td>
+              <td>40</td>
+              <td>80</td>
+              <td>80</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <th scope="row">영어</th>
+              <td>80</td>
+              <td>30</td>
+              <td>90</td>
+              <td>90</td>
+              <td>90</td>
+            </tr>
+          </tbody>
+          <!-- 테이블의 요약 -->
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">평균</th>
+              <td>90</td>
+              <td>50</td>
+              <td>80</td>
+              <td>40</td>
+              <td>20</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <!-- 디자인할때만 STYLE 사용! / 중괄호는 STYLE에서만 사용한다. / 근데 보통은 CSS에서 사용한다. -->
+      <style>
+        table,
+        tr,
+        td,
+        th {
+          border: 1px solid #ff0000;
+        }
+        table {
+          width: 100%;
+        }
+        td {
+          height: 100px;
+        }
+        thead {
+          background: #ffbb00;
+        }
+        tfoot {
+          background: #cacaca;
+        }
+      </style>
 
-        <!-- 목록 만들기 먼저 header ->h1,2,3 을 입력하여 타이틀 제목을 쓴다. 그 다음 section ->h123으로 나눈다. -->
+      <!-- 목록 만들기 먼저 header ->h1,2,3 을 입력하여 타이틀 제목을 쓴다. 그 다음 section ->h123으로 나눈다. -->
 
-        <header>
-            <h2>List 태그</h2>
-        </header>
-        <section>
-            <h3>좋아하는 음식</h3>
-            <!-- 순서 없는 목록 만들기 ul을 입력한 다음 li항목을 만들고 작성하면 완료!-->
+      <header>
+        <h2>List 태그</h2>
+      </header>
+      <section>
+        <h3>좋아하는 음식</h3>
+        <!-- 순서 없는 목록 만들기 ul을 입력한 다음 li항목을 만들고 작성하면 완료!-->
+        <ul>
+          <li>개</li>
+          <li>고양이</li>
+          <li>물고기</li>
+        </ul>
+
+        <!-- 순서가 있는 목록 만들기 / ol을 입력한 다음 li 항목을 만들고 작성하면 완료!-->
+        <ol>
+          <li>고양이</li>
+          <li>물고기</li>
+          <li>개</li>
+        </ol>
+
+        <!-- nav -->
+        <h3>메인메뉴</h3>
+        <!-- depth1   -->
+        <ul>
+          <li>
+            탑
+            <!-- depth2 -->
             <ul>
-                <li>개</li>
-                <li>고양이</li>
-                <li>물고기</li>
-            </ul>
-
-            <!-- 순서가 있는 목록 만들기 / ol을 입력한 다음 li 항목을 만들고 작성하면 완료!-->
-            <ol>
-                <li>고양이</li>
-                <li>물고기</li>
-                <li>개</li>
-            </ol>
-
-            <!-- nav -->
-            <h3>메인메뉴</h3>
-            <!-- depth1   -->
-            <ul>
-                <li>
-                    탑 
-                    <!-- depth2 -->
-                    <ul>
-                        <li>
-                            블라우스
-                            <ul>
-                                <li>depth3</li>
-                                <li>depth3</li>
-                                <li>depth3</li>
-                            </ul>
-                        </li>
-                        <li>티</li>
-                        <li>셔츠</li>
-                        <li>니트</li>
-                    </ul>
-                </li>
-                <li>
-                    아우터
-                    <!-- depth2 -->
-                    <ul>
-                        <li>자켓</li>
-                        <li>코트</li>
-                        <li>
-                            가디건
-                            <ul>
-                                <li>depth3</li>
-                                <li>depth3</li>
-                                <li>depth3</li>
-                            </ul>
-                        </li>
-                        <li>머플러</li>
-                    </ul>
-                </li>
-                <li>
-                    팬츠
-                    <!-- depth2 -->
-                    <ul>
-                        <li>청바지</li>
-                        <li>짧은바지</li>
-                        <li>긴바지</li>
-                        <li>레깅스</li>
-                    </ul>
-                </li>
-                <li>
-                    악세서리
-                    <!-- depth2 -->
-                    <ul>
-                        <li>귀걸이</li>
-                        <li>목걸이</li>
-                        <li>반지</li>
-                        <li>팔찌</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <a href="#">depth1</a>
-                    <ul>
-                        <li>
-                            <a href="#">depth2</a>
-                            <ul>
-                                <li>
-                                    <a href="#">depth3</a>
-                                </li>
-                                <li>
-                                    <a href="#">depth3</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">depth2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">depth1</a>
-                    <ul>
-                        <li>
-                            <a href="#">depth2</a>
-                        </li>
-                        <li>
-                            <a href="#">depth2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">depth1</a>
-                    <ul>
-                        <li>
-                            <a href="#">depth2</a>
-                        </li>
-                        <li>
-                            <a href="#">depth2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">depth1</a>
-                    <ul>
-                        <li>
-                            <a href="#">depth2</a>
-                        </li>
-                        <li>
-                            <a href="3">depth2</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <header>
-            <h2>dl, dt, dd 태그</h2>
-        </header>
-        <section>
-            <dl>
-                <dt>이름</dt>
-                <dd>설명</dd>
-                <dt>이름</dt>
-                <dd>설명</dd>
-            </dl>
-
-            <dl>
-                <dt>이름</dt>
-                <dd>설명</dd>
-            </dl>
-            <dl>
-                <dt>이름</dt>
-                <dd>설명</dd>
-            </dl>
-            </section>
-
-            <header>
-                <h2>block,inline</h2>
-            </header>
-            <section>
+              <li>
+                블라우스
                 <ul>
-                    <li>
-                        block
-                        <div style="border: 1px solid red;">div</div>
-                        <div style="border: 1px solid red;">div2</div>
-                        <section style="border: 1px solid red;">section</section>
-                        <header style="border: 1px solid red;">section</header>
-                    </li>
+                  <li>depth3</li>
+                  <li>depth3</li>
+                  <li>depth3</li>
                 </ul>
-            </section>
+              </li>
+              <li>티</li>
+              <li>셔츠</li>
+              <li>니트</li>
+            </ul>
+          </li>
+          <li>
+            아우터
+            <!-- depth2 -->
+            <ul>
+              <li>자켓</li>
+              <li>코트</li>
+              <li>
+                가디건
+                <ul>
+                  <li>depth3</li>
+                  <li>depth3</li>
+                  <li>depth3</li>
+                </ul>
+              </li>
+              <li>머플러</li>
+            </ul>
+          </li>
+          <li>
+            팬츠
+            <!-- depth2 -->
+            <ul>
+              <li>청바지</li>
+              <li>짧은바지</li>
+              <li>긴바지</li>
+              <li>레깅스</li>
+            </ul>
+          </li>
+          <li>
+            악세서리
+            <!-- depth2 -->
+            <ul>
+              <li>귀걸이</li>
+              <li>목걸이</li>
+              <li>반지</li>
+              <li>팔찌</li>
+            </ul>
+          </li>
+        </ul>
 
-            <header>
-                <h2>class</h2>
-            </header>
-            <section>
-                <div class="wrap">
-                    <div class="section sec1">1</div>
-                    <div class="section sec2">2</div>
-                    <div class="section sec3">3</div>
-                </div>
+        <ul>
+          <li>
+            <a href="#">depth1</a>
+            <ul>
+              <li>
+                <a href="#">depth2</a>
+                <ul>
+                  <li>
+                    <a href="#">depth3</a>
+                  </li>
+                  <li>
+                    <a href="#">depth3</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">depth2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">depth1</a>
+            <ul>
+              <li>
+                <a href="#">depth2</a>
+              </li>
+              <li>
+                <a href="#">depth2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">depth1</a>
+            <ul>
+              <li>
+                <a href="#">depth2</a>
+              </li>
+              <li>
+                <a href="#">depth2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">depth1</a>
+            <ul>
+              <li>
+                <a href="#">depth2</a>
+              </li>
+              <li>
+                <a href="3">depth2</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <header>
+        <h2>dl, dt, dd 태그</h2>
+      </header>
+      <section>
+        <dl>
+          <dt>이름</dt>
+          <dd>설명</dd>
+          <dt>이름</dt>
+          <dd>설명</dd>
+        </dl>
+
+        <dl>
+          <dt>이름</dt>
+          <dd>설명</dd>
+        </dl>
+        <dl>
+          <dt>이름</dt>
+          <dd>설명</dd>
+        </dl>
+      </section>
+
+      <header>
+        <h2>block,inline</h2>
+      </header>
+      <section>
+        <ul>
+          <li>
+            block
+            <div style="border: 1px solid red">div</div>
+            <div style="border: 1px solid red">div2</div>
+            <section style="border: 1px solid red">section</section>
+            <header style="border: 1px solid red">section</header>
+          </li>
+        </ul>
+      </section>
+
+      <header>
+        <h2>class</h2>
+      </header>
+      <section>
+        <div class="wrap">
+          <div class="section sec1">1</div>
+          <div class="section sec2">2</div>
+          <div class="section sec3">3</div>
+        </div>
+
+        <!-- 스타일 값은 무조건 중괄호 사용하기 -->
+        <style>
+          .wrap {
+            border: 5px solid #7700ff;
+            background: #ffe600;
+          }
+          .section {
+            border: 4px solid orange;
+          }
+          .sec1 {
+            background: greenyellow;
+          }
+          .sec2 {
+            background: peachpuff;
+          }
+          .sec3 {
+            background: skyblue;
+          }
+        </style>
+      </section>
+
+      <!-- class 중복이 되는 애들 / id 중복이 되지 않는 애들 디자인을 넣을 때에는 class을 넣고  아이디는 보통 개발자들이 사용한다. 공적인 요소나 서버에 뭔가를 받아오거나 퍼블리싱(html,css) 하면 class만 사용하기 한 페이지 동일한 id값이 2개 이상이면 오류가 난다. 웹디자인 기능사는 css까지로만 작업한다.-->
+
+      <header>
+        <h2>iframe</h2>
+      </header>
+      <iframe
+        src="./01-layout.html"
+        frameborder="0"
+        style="width: 100%; height: 300px;"
+      ></iframe>
 
 
-                <!-- 스타일 값은 무조건 중괄호 사용하기 -->
-                <style>
-                    .wrap {
-                            border: 5px solid #7700ff;
-                            background: #ffe600;
-                    }
-                    .section {
-                        border: 4px solid orange;
-                    }
-                    .sec1 {
-                        background: greenyellow;
-                    }
-                    .sec2 {
-                        background: peachpuff;
-                    }
-                    .sec3 {
-                        background: skyblue;
-                    }
-                </style>
-            </section>
 
-            <!-- class 중복이 되는 애들 / id 중복이 되지 않는 애들 디자인을 넣을 때에는 class을 넣고  아이디는 보통 개발자들이 사용한다. 공적인 요소나 서버에 뭔가를 받아오거나 퍼블리싱(html,css) 하면 class만 사용하기 한 페이지 동일한 id값이 2개 이상이면 오류가 난다. 웹디자인 기능사는 css까지로만 작업한다.-->
-            
-        <!-- section 넣고 h1 넣기! (사이에 이름 넣기 ex.main) 그 다음 p 입력한 다음 자신이 원하는 문구 넣거나 lorem 넣어서 예시문구 작성하기 -->
-        <!-- 바로가기 만들고 싶으면 a 태그 넣어서 <h>에 넣은 이름을 #해서 넣기(ex.#main) 그 다음 버튼 이름 넣기(ex.main 바로가기) 그리고 main section으로 가서 <section>을 <scetion id="main"으로 변경하기 -->
-        <section id="nav">
-            <h2>nav</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
-        </section>
-        <section>
-            <h2>c1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
-        </section>
-        <section>
-            <h2>c1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
-        </section>
-        <section id="main">
-            <h2>Main</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur maiores quae dolores neque debitis cum assumenda inventore libero magni iste rerum!</p>
-            <a href="#nav">nav 바로가기</a>
-        </section>
+
+      <!-- section 넣고 h1 넣기! (사이에 이름 넣기 ex.main) 그 다음 p 입력한 다음 자신이 원하는 문구 넣거나 lorem 넣어서 예시문구 작성하기 -->
+      <!-- 바로가기 만들고 싶으면 a 태그 넣어서 <h>에 넣은 이름을 #해서 넣기(ex.#main) 그 다음 버튼 이름 넣기(ex.main 바로가기) 그리고 main section으로 가서 <section>을 <scetion id="main"으로 변경하기 -->
+      <section id="nav">
+        <h2>nav</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur
+          maiores quae dolores neque debitis cum assumenda inventore libero
+          magni iste rerum!
+        </p>
+      </section>
+      <section>
+        <h2>c1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur
+          maiores quae dolores neque debitis cum assumenda inventore libero
+          magni iste rerum!
+        </p>
+      </section>
+      <section>
+        <h2>c1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur
+          maiores quae dolores neque debitis cum assumenda inventore libero
+          magni iste rerum!
+        </p>
+      </section>
+      <section id="main">
+        <h2>Main</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          veritatis veniam quis fuga voluptatem aspernatur ea, itaque tenetur
+          maiores quae dolores neque debitis cum assumenda inventore libero
+          magni iste rerum!
+        </p>
+        <a href="#nav">nav 바로가기</a>
+      </section>
     </div>
-    <!-- 주석태그 --> 
+    <!-- 주석태그 -->
     <!-- <p>안녕 반가워.</p> -->
     <p>안녕<!--  반가워. --></p>
-    
-</body>
+  </body>
 </html>
