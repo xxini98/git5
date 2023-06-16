@@ -1,113 +1,169 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JUST쇼핑몰</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 의미있는 마크업(헤더,메인,풋터) / a태그 사용하고 꼭 # 집어넣기! /class안에 이름 넣을때 숫자가 먼저 오면 안된다. 그럼 오류가 난다.-->
     <div class="wrap">
-        <header class="header">
-            <!-- 로고 -->
-            <h1 class="메인메뉴">
-                <a href="#">JUST쇼핑몰</a>
-            </h1>
-            <!-- 네비게이션 -->
-            <h2>메인 메뉴</h2>
-            <nav class="gnb">
-                <ul class="depth1">
-                    <li>
-                        <a href="#">탑</a>
-                        <ul class="depth2">
-                            <li><a href="#">블라우스</a></li>
-                            <li><a href="#">티</a></li>
-                            <li><a href="#">셔츠</a></li>
-                            <li><a href="#">니트</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">아우터</a>
-                        <ul class="depth2">
-                            <li><a href="#">자켓</a></li>
-                            <li><a href="#">코트</a></li>
-                            <li><a href="#">가디건</a></li>
-                            <li><a href="#">머플러</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">팬츠</a>
-                        <ul class="depth2">
-                            <li><a href="#">청바지</a></li>
-                            <li><a href="#">짧은바지</a></li>
-                            <li><a href="#">긴바지</a></li>
-                            <li><a href="#">레깅스</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">악세서리</a>
-                        <ul class="depth2">
-                            <li><a href="#">귀걸이</a></li>
-                            <li><a href="#">목걸이</a></li>
-                            <li><a href="#">반지</a></li>
-                            <li><a href="#">팔찌</a></li>
-                        </ul>
-                    </li>
+      <header class="header">
+        <!-- 로고 -->
+        <h1 class="메인메뉴">
+          <a href="#">JUST쇼핑몰</a>
+        </h1>
+        <!-- 네비게이션 -->
+        <h2>메인 메뉴</h2>
+        <nav class="gnb">
+          <ul class="depth1">
+            <li>
+              <a href="#">탑</a>
+              <ul class="depth2">
+                <li><a href="#">블라우스</a></li>
+                <li><a href="#">티</a></li>
+                <li><a href="#">셔츠</a></li>
+                <li><a href="#">니트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아우터</a>
+              <ul class="depth2">
+                <li><a href="#">자켓</a></li>
+                <li><a href="#">코트</a></li>
+                <li><a href="#">가디건</a></li>
+                <li><a href="#">머플러</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">팬츠</a>
+              <ul class="depth2">
+                <li><a href="#">청바지</a></li>
+                <li><a href="#">짧은바지</a></li>
+                <li><a href="#">긴바지</a></li>
+                <li><a href="#">레깅스</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">악세서리</a>
+              <ul class="depth2">
+                <li><a href="#">귀걸이</a></li>
+                <li><a href="#">목걸이</a></li>
+                <li><a href="#">반지</a></li>
+                <li><a href="#">팔찌</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- .slide라 입력하면 div class="slide" 가 나온다. / .slide면 div class="slide"가 나오고 h1.loge라 치면 h1 class="logo"로 나온다-->
+      <main class="main">
+        메인
+        <div class="slide">
+          <div class="slide1">slide1</div>
+          <div class="slide2">slide2</div>
+          <div class="slide3">slide3</div>
+        </div>
+        <div class="contents">
+          <!-- 공지사항(bbs) & 갤러리 -->
+          <div class="tabs">
+            <section class="bbs">
+              <h3>공지사항</h3>
+              <div class="cont">
+                <!-- 텍스트 리스트 -->
+                <ul class="lst-bbs">
+                  <li>
+                    <a href="#">♡멤버십 회원등급 안내</a>
+                  </li>
+                  <li>
+                    <a href="#">2023년 적립금 소멸 안내</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >지그재그에서 조회되는 배송연기 알림에 관한 공지</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#">안전구매를 위한 본인인증 서비스 개정</a>
+                  </li>
+                  <li>
+                    <a href="#">상품별 사이즈 측정 방법</a>
+                  </li>
                 </ul>
-            </nav>
-        </header>
-        <!-- .slide라 입력하면 div class="slide" 가 나온다. / .slide면 div class="slide"가 나오고 h1.loge라 치면 h1 class="logo"로 나온다-->
-        <main class="main">메인
-            <div class="slide">
-                <div class="slide1">slide1</div>
-                <div class="slide2">slide2</div>
-                <div class="slide3">slide3</div>
-            </div>
-            <div class="contents">
-                <!-- 공지사항(bbs) & 갤러리 -->
-                <div class="tabs">
-                    <section class="bbs">
-                        <h3>공지사항</h3>
-                        <div class="cont">공지사항 내용</div>
-                    </section>
-                    <section class="gallery">
-                        <h3>갤러리</h3>
-                        <div class="cont">갤러리 내용</div>
-                    </section>
-                </div>
-                <!-- 배너 -->
-                <div class="bnr">
+              </div>
+            </section>
+            <section class="gallery">
+              <h3>갤러리</h3>
+              <div class="cont">
+                <!-- 썸네일 리스트 -->
+                <ul class="lst-gallery">
+                  <li>
                     <a href="#">
-                        <img src="#" alt="">
+                      <img src="이미지 경로" alt="" />
                     </a>
-                </div>
-                <!-- 바로가기 -->
-                <div class="goto">
-                    <ul>
-                        <li><a href="#">바로가기1</a></li>
-                        <li><a href="#">바로가기2</a></li>
-                        <li><a href="#">바로가기3</a></li>
-                        <li><a href="#">바로가기4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="logo-foot">
-                <a href="#">로고 풋터용</a>
-            </div>
-            <div class="copyright">copyright</div>
-            <div class="sns">
-                <ul>
-                    <li><a href="#">facebook</a></li>
-                    <li><a href="#">instagram</a></li>
-                    <li><a href="#">youtube</a></li>
-                    <li><a href="#">blog</a></li>
+                    <a href="#">
+                      <p>여름 축제, 여름 원피스</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="이미지 경로" alt="" />
+                    </a>
+                    <a href="#">
+                      <p>여름 축제, 여름 원피스</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="이미지 경로" alt="" />
+                    </a>
+                    <a href="#">
+                      <p>여름 축제, 여름 원피스</p>
+                    </a>
+                  </li>
                 </ul>
-            </div>
-        </footer>
+              </div>
+            </section>
+          </div>
+          <!-- 배너 -->
+          <div class="bnr">
+            <a href="#">
+              <img src="#" alt="" />
+            </a>
+          </div>
+          <!-- 바로가기 -->
+          <div class="goto">
+            <ul>
+              <li><a href="#">바로가기1</a></li>
+              <li><a href="#">바로가기2</a></li>
+              <li><a href="#">바로가기3</a></li>
+              <li><a href="#">바로가기4</a></li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="logo-foot">
+          <a href="#">로고 풋터용</a>
+        </div>
+        <div class="copyright">copyright</div>
+        <div class="sns">
+          <ul>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">youtube</a></li>
+            <li><a href="#">blog</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
-
-    
-</body>
+    <!-- modal #modal이라고 작성하면 div id=modal이라고 뜬다.-->
+    <div id="modal" class="dimmed">
+      <div class="modal-box">
+        <h3>모달창 제목</h3>
+        <p>모달창 내용</p>
+        <button>닫기</button>
+      </div>
+    </div>
+  </body>
 </html>
