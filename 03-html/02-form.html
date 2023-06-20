@@ -20,11 +20,12 @@
   <body>
     <h1>html form</h1>
 
+    <!-- required는 submit이어야 한다. -->
     <form action="">
       <div class="terms_item">
         <div class="inp">
-          <input type="checkbox" name="" id="check1" />
-          <label for="check1">네이버 이용약관</label>
+          <input type="checkbox" name="" id="check1" required />
+          <label for="check1">[필수 선택]네이버 이용약관</label>
         </div>
 
         <div class="box">
@@ -50,6 +51,7 @@
     </form>
 
     <hr />
+    <!-- placeholder는 아이디에 10자 이하로 라는 말이 뜨면서 그걸 누르면 사라진다! 즉 예시같은 것 / autofocus는 네이버 검색창처럼 들어가면 검은색으로 뜨는 것 -->
     <form action="">
       <div>
         <label for="id"> 아이디</label>
@@ -59,6 +61,8 @@
           id="id"
           placeholder="10자 이하로"
           maxlength="10"
+          required
+          autofocus
         />
       </div>
 
@@ -139,6 +143,8 @@
           <label for="bbs">본문</label>
           <textarea name="bbs" id="bbs" cols="30" rows="10"></textarea>
         </div>
+
+        <!-- 실무에서는 multiple 사용 안 하고 여러줄로 넣는다. -->
         <div>
           <label for="myfile">파일첨부</label>
           <input type="file" name="myfile" id="myfile" multiple />

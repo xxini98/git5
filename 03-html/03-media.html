@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media</title>
+  </head>
+  <body>
+    <h1>media</h1>
+
+    <h2>video</h2>
+    <!-- video 태그시 주소or파일만 넣으면 재생이 안됨 이때는 controls를 넣어야 재생이 되고, autoplay는 페이지들어가자마자 자동재생  muted는 재생은 되지만 소리는 안나게 해주는 태그 loop는 동영상이 계속 재생되는 태그 but 요즘은 video로 안 넣고 유튜브 태그를 사용하는 추세이다-->
+    <video
+      src="https://www.w3schools.com/html/mov_bbb.mp4"
+      autoplay
+      controls
+      muted
+      loop
+    ></video>
+
+    <!-- audio도 video랑 똑같은 태그 넣으주면 된다.  -->
+    <h2>audio</h2>
+    <audio
+      src="https://www.w3schools.com/html/horse.ogg"
+      autoplay
+      controls
+    ></audio>
+
+    <!-- youtube는 youtube의 소스 복사해서 가지고 오기 그리고 자동재생하고 싶으면 주소 뒤 '?autoplay=q&mute=1' 넣어야 자동재생됨 이때 mute를 1값으로 하면 소리없는 상태에서 자동재생이고 2값으로 하면 소리가 있는 상태에서 자동재생된다. -->
+    <h2>youtube</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/qD1kP_nJU3o?autoplay=1&mute=1&controls=0&loop=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

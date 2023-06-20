@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 | css</title>
+  </head>
+  <body>
+    <h1>선택자</h1>
+
+    <!-- depth만들기 먼저 ul 태그를 달아주고 그 안에 li 태그를 달아준다 그 다음 a태그를 사용해서 링크 연결하고 depth메뉴 이름을 작성한다 그리고 그 안에 또 다른 세부 메뉴를 만들려고 하면은 li<ahef=~></a></li>가 되어있으면 a href 양 쪽을 잘라준 다음 a태그 아래에 ul 작성하고 li 후 a 태그를 달고 세부메뉴를 넣어준다. -->
+
+    <h2>태그 선택자</h2>
+    <div id="gnb">
+      <ul class="depth1">
+        <li class="fst">
+          <a href="#">menu1</a>
+          <ul class="depth2-1">
+            <li><a href="#">menu1-1</a></li>
+            <li><a href="#">menu1-2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu2</a>
+          <ul class="depth2-2">
+            <li><a href="#">menu2-1</a></li>
+            <li><a href="#">menu2-2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu3</a>
+          <ul class="depth2-3">
+            <li><a href="#">menu3-1</a></li>
+            <li><a href="#">menu3-2</a></li>
+          </ul>
+        </li>
+        <li class="lst">
+          <a href="#">menu4</a>
+          <ul class="depth2-4">
+            <li><a href="#">menu4-1</a></li>
+            <li><a href="#">menu4-2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 스타일 넣기 스타일 넣고 싶은 태그르 작성하고 {}를 친다 그 안에 자신이 원하는 속성 넣어주기 margin은 내 바깥으로 공간을 낸다고 생각하기 
+    만약에 하위 li 넣고 싶으면 경로를 찾아서 넣어준다 ul li ul li 이런식으로! (자손) / ul > li (or ul li) | 자식(ex.고모 아빠) (> 이걸로 표시한다!)이런식으로 넣으면 ul 아래에 있는 li만! -->
+
+    <!-- 아이디값 선택은 #아이디이름 넣어준다. 경로를 잡을 떄는 최대 3단계까지! 태그 이름은 가급적 잡기 말기! 실무에서는 수많은 태그가 있어서 중복으로 잡힌다. 그래서 class 이름으로 잡는다.-->
+    <style>
+      #gnb {
+        border: 1px solid #ffe4e4;
+      }
+      .depth2-1 {
+        border: 5px solid #ffd000;
+      }
+      .depth2-1 li {
+        background: #0077ff;
+      }
+      .depth2-3 a {
+        background: #01245a;
+      }
+      .depth2-4 a {
+        background: #a71212;
+      }
+      .depth1 .lst > a,
+      .depth1 .fst > a {
+        background: turquoise;
+      }
+      ul {
+        border: 1px solid #000;
+      }
+      li {
+        margin: 10px;
+        background: #ffffe2;
+      }
+
+      ul li {
+        background: #ffd0f5;
+      }
+      ul.depth1 > li {
+        background: #c1f8ff;
+      }
+      .depth1 > li > a {
+      }
+    </style>
+    <!-- 위의 경우 ul li는 ul 안에 있는 li(자손)가 모두 적용되는 것이고 ul.depth1 > li의 경우에는 ul의 이름인 depth1 안에 있는 li(자식)만 잡아라! 라는 의미로 그래서 자식 색깔 따로 자손 색깔 따로 적용되는 것이다.-->
+  </body>
+</html>
