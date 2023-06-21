@@ -8,9 +8,51 @@
   <body>
     <h1>선택자</h1>
 
+    <h2>태그 선택자</h2>
+
+    <!-- 태그 이름으로 사용하면 안됨! 그러니 id or class 이름으로 작성하기! 태그는 언제든지 바뀔 수 있다는 것을 잊지말기 -->
+    <div class="wrap">
+      warp
+      <div class="util">util</div>
+
+      <header class="header">
+        header
+        <h1 class="logo">
+          <a href="#">logo</a>
+        </h1>
+        <nav class="gnb">nav</nav>
+      </header>
+    </div>
+    <!-- 색상의 경우 hex(#ffffff)가 원칙이고 rgb는 투명도 사용시에 사용한다. (hex는 투명도 제공x) rgb(n,n,n,0~1) 투명도는 0~1 사이의 수치
+    -->
+    <style>
+      .wrap {
+        border: 5px solid #cc00ff;
+        background: red;
+      }
+      .util {
+        background: rgb(255, 208, 0, 0.5);
+      }
+      .header {
+        border: 5px solid pink;
+      }
+      .logo {
+        background: #000;
+      }
+      .logo a {
+        font-size: 18px;
+        color: #0000ff;
+      }
+      .gnb {
+        border: 5px solid rgb(0, 0, 255, 0.5);
+      }
+    </style>
+    <br />
+    <br />
+    <br />
+
     <!-- depth만들기 먼저 ul 태그를 달아주고 그 안에 li 태그를 달아준다 그 다음 a태그를 사용해서 링크 연결하고 depth메뉴 이름을 작성한다 그리고 그 안에 또 다른 세부 메뉴를 만들려고 하면은 li<ahef=~></a></li>가 되어있으면 a href 양 쪽을 잘라준 다음 a태그 아래에 ul 작성하고 li 후 a 태그를 달고 세부메뉴를 넣어준다. -->
 
-    <h2>태그 선택자</h2>
     <div id="gnb">
       <ul class="depth1">
         <li class="fst">

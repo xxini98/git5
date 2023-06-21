@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자 | css 하단 분류</title>
+
+    <!-- head에 style을 넣어 *로 전체 선택하고 중괄호 후 list-style: none; 해줘야 한다.  -->
+    <style>
+        * {
+            list-style: none;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>가상선택자</h1>
+    <h2>순서</h2>
+
+    <!-- ul>li {menu $}*4 하면 아래처럼 된다. -->
+    <ul class="lst-bbs">
+      <li>menu 1</li>
+      <li>menu 2</li>
+      <li>menu 3</li>
+      <li>menu 4</li>
+    </ul>
+    <style>
+      .lst-bbs {
+        border: 5px solid greenyellow;
+      }
+      .lst-bbs li {
+        border: 5px solid paleturquoise;
+        margin: 5px;
+      }
+      /* .lst-bbs li:first-child 이렇게 쓰면 lst-bbs라는 클래스 중 첫번째 li만 선택된다. li:first-child는 꼭 붙여서 써야한다. 띄어쓰면 안됨 맨날 클래스 이름 넣기가 어려우니 이렇게 사용한다. 
+        li:nth-child(n) 는 (n)에 몇번째 아이 적용할 것인지 숫자를 쓰면 된다. 그리고 마지막 아이는 li:last-child 라고 써도 된다. 이때 first-child / last-child는 저대로가 완성된 태그이기에 nth-child(n) 처럼 (n)를 사용하지 않는다. 만약 더 궁금하면 https://oddcode.tistory.com/36 에서 확인해주기 */
+
+      .lst-bbs li:first-child {
+        background: turquoise;
+      }
+
+      .lst-bbs li:nth-child(2) {
+        background: orange;
+      }
+      .lst-bbs li:nth-child(3) {
+        background: blue;
+      }
+      .lst-bbs li:last-child {
+        background: purple;
+      }
+
+      /* css는 코드 작성 순서대로 적용된다고 보면 된다. li:hover를 first-child or nth-child 위에 작성하면 적용이 안되는데 이유는 first-child or nth-child는 고정 hover는 상태이기에 꼭 고정 아래에 들어가야 적용이 된다.  */
+      .lst-bbs li:hover {
+        background: #000;
+        color: white;
+      }
+    </style>
+
+    <h2>링크 가상선택자</h2>
+    <a href="#">링크 가상선택자</a>
+    <style>
+      a {
+        font-size: 20px;
+        color: #000;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      /* a:active는 클릭하고 있을 때 색상이 변하는 것 a:vistited 때문에 애먹으면 주석처리 해주면 된다. */
+      a:active {
+        color: green;
+      }
+
+      /* a:visited {
+        color: aquamarine;
+      } */
+    </style>
+
+
+<!--     ul>li*4>a{공지사항 $} 이렇게 넣으면 아래처럼 완성됨 엘리먼트는 콜론을 :: 2개 사용한다 ::before의 경우에는 꼭 content를 아래에 줄 추가 해줘야 한다. -->
+    <h2>가상 엘리먼트 선택자</h2>
+    <ul class="list2">
+        <li><a href="#">공지사항 1</a></li>
+        <li><a href="#">공지사항 2</a></li>
+        <li><a href="#">공지사항 3</a></li>
+        <li><a href="#">공지사항 4</a></li>
+    </ul>
+    <style>
+        .list2 a::before {
+            content: 'before';
+        }
+        .list2 a::after {
+            content: 'after';
+        }
+        .list2 a {
+            color: red;
+        }
+        /* 가로 세로가 적용이 안되면 display를 block 처리 해준다. */
+        .list2 li::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #000;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .list2 li::after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: blue;
+            border: 10px;
+            margin-left: 10px;
+        }
+    </style>
+
+    <ul class="lst3">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+    <!-- display: flex는 세로 정렬을 가로 정렬로! -->
+    <style>
+        .lst3 {
+            display: flex;
+        }
+
+        .lst3 li::after {
+            content: '';
+            display: inline-block; 
+            width: 10px;
+            height: 10px;
+            background: blue;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .lst3 li:last-child::after {
+            content: '';
+            display: none;
+        }
+
+        .lst3::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 30px;
+            background: blue;
+            margin-right: 10px;
+        }
+        .lst3::after {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 30px;
+            background: blue;
+            margin-left: 10px;
+        }
+    </style>
+  </body>
+</html>
