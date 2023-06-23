@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델 | css</title>
+    <!-- reset -->
+  </head>
+  <body>
+    <!-- 바깥의 공간을 만들고 싶으면 마진을 사용하기  -->
+    <h1>박스모델</h1>
+
+    <h2>가로 사이즈</h2>
+    <div class="box1">
+      <!-- span 인라인 태그(글씨 딱 그만큼 영역만!) : width, height 안들어감 -->
+      <span>span</span>
+      <span>span</span>
+      <!-- div 블록 태그 ㅣ width, height auto로 들어감 -->
+      <div>div tag</div>
+      <div>div tag</div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>세로 사이즈</h2>
+    <div class="box2">
+      <div></div>
+    </div>
+    <style>
+      /* 엄마가 높이 0이면  자식이 높이 100%를 해도 높이 0이 된다. 그래서 이 경우에는 자식을 px을 넣어주거나 만약에 꽉 채워야하는 경우 엄마의 높이값을 조절해줘야 한다. if 바디값이나 엄마를 조절할 수 없다면 100vh 사용하면 된다. */
+      .box2 {
+        background: gray;
+      }
+      .box2 div {
+        height: 100vh;
+        background: yellow;
+      }
+    </style>
+
+    <!-- span 태그는 인라인 태그 / div는 블럭태그이다 
+    블럭태그라는 거는 가로가 100%라서 span에 bg를 적용했을때랑 div에 bg를 적용했을때랑 다르게 나오는거다. 
+    그래서 span은 줄바꿈이 되지 않는데 div는 줄바꿈이 된다. 
+
+    width의 기본값은 auto span auto는 글씨 길이 만큼만 적용 /div의 auto는 가로 100% 적용
+
+    그래서 가로 사이즈를 원하는 만큼 넣고 싶으면 display : block을 사용해 주면 된다. 
+    인라인이 블럭태그 되는 경우는 a 태그를 사용할 때 ex. 버튼 만들때 -->
+    <style>
+      .box1 {
+        background: red;
+      }
+      .box1 span {
+        /* width: 100px;
+        height: 100px; */
+        background: #6d4949;
+      }
+
+      /* div의 가로값은 자동 100% 이지만, height의 경우에는 0이다. div는 height의 경우 꼭 써줘야 한다.  */
+      .box1 div {
+        width: 50%;
+        height: 100px;
+        background: darkblue;
+      }
+    </style>
+
+    <br />
+    <br />
+    <br />
+    <h2>max-width</h2>
+    <div class="box3">max-width</div>
+
+    <!-- max-width 사용방법 모바일에서는 100% 넣고 싶고, pc 버전은 1024까지만 늘어났으면 하다~ 싶으면 이걸 쓰기! -->
+    <!-- min-width 는 어느정도까지 가면 더 이상 안 줄게 하고 싶을 때 사용하는 것이다.  -->
+    <style>
+      .box3 {
+        height: 100px;
+        min-width: 320px;
+        background: deeppink;
+        max-width: 600px;
+        margin: auto;
+      }
+    </style>
+
+    <h2>margin</h2>
+    <div class="box4">
+      <div class="box4-1"></div>
+      <div class="box4-2"></div>
+      <div class="box4-3"></div>
+      <div class="box4-4"></div>
+      <div class="box4-5"></div>
+      <div class="box4-6"></div>
+    </div>
+    <style>
+      /* margin: 10px 20px 30px 40px 이러면 위 오른쪽 아래 왼쪽 (시계방향)으로 적용됨 */
+      .box4 {
+        margin: 10px 20px 30px 40px;
+        background: salmon;
+      }
+      .box4 div {
+        width: 100px;
+        height: 100px;
+        background: orange;
+      }
+      .box4 .box4-1 {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+      }
+      .box4 .box4-2 {
+        margin: 50px;
+      }
+      /* margin: 100px 50px 하면 위 아래 100 | 왼 오 50씩 적용 */
+      .box4 .box4-3 {
+        margin: 100px 50px;
+      }
+      .box4 .box4-4 {
+        margin: 200px 300px 400px;
+      }
+      .box4 .box4-5 {
+        margin: 0 auto;
+      }
+      /* 부모값 그대로 받고 싶다면 margin: inherit; 사용하기 */
+      .box4 .box4-6 {
+        margin: inherit;
+      }
+    </style>
+
+    <h2>padding</h2>
+    <div class="box5">
+      <div>padding1</div>
+      <div>padding2sfsdfsdfsdfsdfsdfsdfsdfsd</div>
+      <div>padding3</div>
+      <br />
+    </div>
+
+    <style>
+      .box5 div {
+        display: inline-block;
+        border: 1px solid #000;
+        background: silver;
+      }
+      .box5 div:first-child {
+        padding: 10px;
+      }
+      .box5 div:nth-child(2) {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 20px 50px;
+      }
+      .box5 div:nth-child(3) {
+        padding: 20px 100px 50px;
+      }
+    </style>
+
+    <div class="box6">
+      <div>padding4</div>
+      <div>padding5</div>
+      <div>padding6</div>
+      <div>padding7</div>
+    </div>
+
+    <style>
+      .box6 div {
+        width: 100px;
+        height: 100px;
+        background: #ffe600;
+        /* border: 1px solid #000; */
+      }
+      .box6 div:nth-child(2) {
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        background: red;
+      }
+      .box6 div:nth-child(3) {
+        width: 40px;
+        height: 80px;
+        padding: 10px 30px;
+        background: violet;
+      }
+      .box6 div:nth-child(4) {
+        padding: 10px 30px;
+        box-sizing: border-box;
+        background: sandybrown;
+      }
+    </style>
+
+    <h2>border</h2>
+    <div class="box7">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <style>
+      .box7 div {
+        width: 100px;
+        height: 100px;
+        background: chocolate;
+      }
+      .box7 div:first-child {
+        border: 10px solid rgba(145, 255, 0, 0.5);
+        border-radius: 15px;
+      }
+      .box7 div:nth-child(2) {
+        border: 20px dotted rgba(0, 255, 234, 0.5);
+        box-sizing: border-box;
+      }
+      .box7 div:nth-child(3) {
+        border-left: 6px solid gold;
+      }
+      .box7 div:nth-child(4) {
+        border-bottom: 1px solid #000;
+      }
+    </style>
+  </body>
+</html>
