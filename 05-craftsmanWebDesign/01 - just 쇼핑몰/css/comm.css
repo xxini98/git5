@@ -1,0 +1,46 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1.5;
+  color: #222328;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background: darkcyan;
+}
+.메인메뉴 {
+  display: flex;
+  align-items: center;
+}
+.메인메뉴 a {
+  display: block;
+  width: 200px;
+  height: 40px;
+}
+.gnb .depth1 {
+  display: flex;
+}
+.gnb .depth1 a {
+  display: block;
+  height: 100px;
+  padding: 0 50px;
+  line-height: 100px;
+  text-align: center;
+}
+.gnb .depth2 {
+  /* display: none; */
+}
+
+/* font랑 text 관련은 글씨를 싸고 있는 겉에 있는 태그에 넣어주는게 제일 좋다. */
