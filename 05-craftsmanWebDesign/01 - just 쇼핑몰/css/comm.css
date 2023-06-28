@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   height: 100px;
-  background: darkcyan;
+  background: white;
 }
 .메인메뉴 {
   display: flex;
@@ -32,15 +32,65 @@
 .gnb .depth1 {
   display: flex;
 }
-.gnb .depth1 a {
+.gnb .depth1 > li > a {
   display: block;
   height: 100px;
   padding: 0 50px;
   line-height: 100px;
   text-align: center;
 }
+.gnb .depth1 > li > a:hover {
+  /* background: #a88b6f; */
+  border-bottom: 3px solid #a88b6f;
+}
+.gnb .depth1:hover .depth2 {
+  display: block;
+}
+
+/* nav depth2 */
 .gnb .depth2 {
-  /* display: none; */
+  display: none;
+  padding: 20px 0;
+  background: #ffffff;
+}
+.gnb .depth2 a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  /* padding: 30px 0; */
+  /* 패딩값을 넣든가 아니면 height를 넣어서 line-height를 넣든가 그렇게 해라. */
+  text-align: center;
+  background: #ffffff;
+}
+.gnb .depth2 > li > a:hover {
+  border-bottom: 4px solid #a88b6f;
+}
+.slide a,
+.slide img {
+  display: block;
+  /* height: 300px; */
+}
+.slide {
+  overflow: hidden;
+  height: 300px;
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.tabs {
+  width: 340px;
+}
+.bnr {
+  width: 400px;
+}
+.goto {
+  width: 365px;
+}
+.bnr a,
+.bnr img {
+  display: block;
 }
 
 /* font랑 text 관련은 글씨를 싸고 있는 겉에 있는 태그에 넣어주는게 제일 좋다. */

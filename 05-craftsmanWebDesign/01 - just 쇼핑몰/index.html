@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JUST쇼핑몰</title>
-    <link rel="stylesheet" href="./css/comm.css">
+    <link rel="stylesheet" href="./css/comm.css" />
   </head>
   <body>
     <!-- 의미있는 마크업(헤더,메인,풋터) / a태그 사용하고 꼭 # 집어넣기! /class안에 이름 넣을때 숫자가 먼저 오면 안된다. 그럼 오류가 난다.-->
@@ -12,7 +12,7 @@
       <header class="header">
         <!-- 로고 -->
         <h1 class="메인메뉴">
-          <a href="#"><img src="./images/로고.jpg" alt="JUST쇼핑몰"></a>
+          <a href="#"><img src="./images/로고.jpg" alt="JUST쇼핑몰" /></a>
         </h1>
         <!-- 네비게이션 -->
         <nav class="gnb">
@@ -58,11 +58,25 @@
       </header>
       <!-- .slide라 입력하면 div class="slide" 가 나온다. / .slide면 div class="slide"가 나오고 h1.loge라 치면 h1 class="logo"로 나온다-->
       <main class="main">
-        
         <div class="slide">
-          <div class="slide1">slide1</div>
-          <div class="slide2">slide2</div>
-          <div class="slide3">slide3</div>
+          <div class="slide1">
+            <a href="#">
+              <img
+                src="./images/slide (1).jpg"
+                alt="ONE.WHITE.SUIT.SLIM.CLEAR"
+              />
+            </a>
+          </div>
+          <div class="slide2">
+            <a href="#">
+              <img src="./images/slide (2).jpg" alt="2023 FASHION JUST WEEK" />
+            </a>
+          </div>
+          <div class="slide3">
+            <a href="#">
+              <img src="./images/slide (3).jpg" alt="썸머 데님 중청 쿨 팬츠 " />
+            </a>
+          </div>
         </div>
         <div class="contents">
           <!-- 공지사항(bbs) & 갤러리 -->
@@ -99,7 +113,10 @@
                 <ul class="lst-gallery">
                   <li>
                     <a href="#">
-                      <img src="이미지 경로" alt="" />
+                      <img
+                        src="./images/갤러리.jpg"
+                        alt="여름 축제, 여름 원피스"
+                      />
                     </a>
                     <a href="#">
                       <p>여름 축제, 여름 원피스</p>
@@ -107,7 +124,10 @@
                   </li>
                   <li>
                     <a href="#">
-                      <img src="이미지 경로" alt="" />
+                      <img
+                        src="./images/갤러리.jpg"
+                        alt="여름 축제, 여름 원피스"
+                      />
                     </a>
                     <a href="#">
                       <p>여름 축제, 여름 원피스</p>
@@ -115,7 +135,10 @@
                   </li>
                   <li>
                     <a href="#">
-                      <img src="이미지 경로" alt="" />
+                      <img
+                        src="./images/갤러리.jpg"
+                        alt="여름 축제, 여름 원피스"
+                      />
                     </a>
                     <a href="#">
                       <p>여름 축제, 여름 원피스</p>
@@ -128,16 +151,39 @@
           <!-- 배너 -->
           <div class="bnr">
             <a href="#">
-              <img src="#" alt="" />
+              <img
+                src="./images/bnr.jpg"
+                alt="summer vacation just와 함께 맞이하는 시원한 여름 방학 즉시할인 up to 10% 선착순 100명 just 에코백 증정 베스트 리뷰 작성시 적립금 100만원 증정"
+              />
             </a>
           </div>
           <!-- 바로가기 -->
           <div class="goto">
             <ul>
-              <li><a href="#">바로가기1</a></li>
-              <li><a href="#">바로가기2</a></li>
-              <li><a href="#">바로가기3</a></li>
-              <li><a href="#">바로가기4</a></li>
+              <li>
+                <a href="#"
+                  >장바구니
+                  <img src="./images/장바구니.png" alt="장바구니" />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  >바로가기2
+                  <img src="./images/문의남기기.png" alt="문의남기기" />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  >바로가기3
+                  <img src="./images/리뷰작성.png" alt="리뷰작성" />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  >바로가기4
+                  <img src="./images/공지사항.png" alt="공지사항" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -149,10 +195,25 @@
         <div class="copyright">&#169; copyright</div>
         <div class="sns">
           <ul>
-            <li><a href="#">facebook</a></li>
-            <li><a href="#">instagram</a></li>
-            <li><a href="#">youtube</a></li>
-            <li><a href="#">blog</a></li>
+            <li>
+              <a href="#"
+                >instagram
+                <img src="./images/instagram.png" alt="인스타그램" />
+              </a>
+            </li>
+            <li>
+              <a href="#">tiktok
+                <img src="./images/tiktok.png" alt="tiktok">
+              </a>
+            </li>
+            <li>
+              <a href="#">twitter
+                <img src="./images/twitter.png" alt="twitter">
+              </a></li>
+            <li>
+              <a href="#">youtube
+                <img src="./images/youtube.png" alt="youtube">
+              </a></li>
           </ul>
         </div>
       </footer>
