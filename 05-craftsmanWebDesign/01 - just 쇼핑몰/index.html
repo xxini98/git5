@@ -80,11 +80,12 @@
         </div>
         <div class="contents">
           <!-- 공지사항(bbs) & 갤러리 -->
-          <div class="tabs">
-            <section class="bbs">
-              <h3>공지사항</h3>
+          <div class="tabs-wrap">
+            <!-- 공지사항 tab -->
+            <div class="tab-item on">
+              <h3 class="tit">공지사항</h3>
               <div class="cont">
-                <!-- 텍스트 리스트 -->
+                <!-- 공지사항 list -->
                 <ul class="lst-bbs">
                   <li>
                     <a href="#">♡멤버십 회원등급 안내</a>
@@ -93,23 +94,15 @@
                     <a href="#">2023년 적립금 소멸 안내</a>
                   </li>
                   <li>
-                    <a href="#"
-                      >지그재그에서 조회되는 배송연기 알림에 관한 공지</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#">안전구매를 위한 본인인증 서비스 개정</a>
-                  </li>
-                  <li>
-                    <a href="#">상품별 사이즈 측정 방법</a>
+                    <a href="#">지그재그에서 조회되는 배송연기 알림</a>
                   </li>
                 </ul>
               </div>
-            </section>
-            <section class="gallery">
-              <h3>갤러리</h3>
+            </div>
+            <!-- 갤러리 tab -->
+            <div class="tab-item">
+              <h3 class="tit">갤러리</h3>
               <div class="cont">
-                <!-- 썸네일 리스트 -->
                 <ul class="lst-gallery">
                   <li>
                     <a href="#">
@@ -117,8 +110,6 @@
                         src="./images/갤러리.jpg"
                         alt="여름 축제, 여름 원피스"
                       />
-                    </a>
-                    <a href="#">
                       <p>여름 축제, 여름 원피스</p>
                     </a>
                   </li>
@@ -128,8 +119,6 @@
                         src="./images/갤러리.jpg"
                         alt="여름 축제, 여름 원피스"
                       />
-                    </a>
-                    <a href="#">
                       <p>여름 축제, 여름 원피스</p>
                     </a>
                   </li>
@@ -139,14 +128,12 @@
                         src="./images/갤러리.jpg"
                         alt="여름 축제, 여름 원피스"
                       />
-                    </a>
-                    <a href="#">
                       <p>여름 축제, 여름 원피스</p>
                     </a>
                   </li>
                 </ul>
               </div>
-            </section>
+            </div>
           </div>
           <!-- 배너 -->
           <div class="bnr">
@@ -190,30 +177,29 @@
       </main>
       <footer class="footer">
         <div class="logo-foot">
-          <a href="#">로고 풋터용</a>
+          <a href="#"><img src="./images/logofoot.png" alt="JUST SHOP"></a>
         </div>
-        <div class="copyright">&#169; copyright</div>
+        <div class="copyright">&#169; Copyright (C) 2022 JUST 쇼핑몰 Corporation. All rights reserved</div>
         <div class="sns">
-          <ul>
+          <ul class="lst-sns">
             <li>
               <a href="#"
-                >instagram
+                >
                 <img src="./images/instagram.png" alt="인스타그램" />
               </a>
             </li>
             <li>
-              <a href="#">tiktok
-                <img src="./images/tiktok.png" alt="tiktok">
+              <a href="#"
+                >
+                <img src="./images/tiktok.png" alt="tiktok" />
               </a>
             </li>
             <li>
-              <a href="#">twitter
-                <img src="./images/twitter.png" alt="twitter">
-              </a></li>
-            <li>
-              <a href="#">youtube
-                <img src="./images/youtube.png" alt="youtube">
-              </a></li>
+              <a href="#"
+                >
+                <img src="./images/twitter.png" alt="twitter" />
+              </a>
+            </li>
           </ul>
         </div>
       </footer>

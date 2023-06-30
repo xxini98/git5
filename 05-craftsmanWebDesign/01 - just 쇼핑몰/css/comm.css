@@ -12,13 +12,11 @@
 .wrap {
   width: 1200px;
   margin: 0 auto;
-  background: #ffffff;
 }
 .header {
   display: flex;
   justify-content: space-between;
   height: 100px;
-  background: white;
 }
 .메인메뉴 {
   display: flex;
@@ -79,8 +77,78 @@
   justify-content: space-between;
   padding: 10px 0;
 }
-.tabs {
+/* tab */
+.tabs-wrap {
+  position: relative;
+  display: flex;
   width: calc(100% / 2 - 230px);
+}
+.tabs-wrap .tab-item {
+  width: 50%;
+}
+/* 비활성화 */
+.tabs-wrap .tab-item .tit {
+  height: 50px;
+  padding-top: 14px;
+  border-bottom: 2px solid #a88b6f;
+  background: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+/* 활성화 tab */
+.tabs-wrap .on .tit {
+  background: #a88b6f;
+  color: #ffffff;
+}
+.tabs-wrap .tab-item .cont {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  /* background: #ca7878; */
+  height: 130px;
+}
+.tabs-wrap .on .cont {
+  display: block;
+}
+.lst-bbs {
+  padding-top: 10px;
+}
+.lst-bbs li {
+  display: flex;
+  align-items: center;
+}
+.lst-bbs li::before {
+  content: "";
+  margin-top: -2px;
+  margin-right: 5px;
+  width: 5px;
+  height: 5px;
+  background: red;
+  display: inline-block;
+}
+.lst-bbs li a {
+  display: block;
+  line-height: 2;
+  /* a태그는 인라인 태그라 line-height가 먹히지 않는다. 이럴 때에는 block으로 바꿔주고 조절해본다. 그리고 line-height의 경우에는 2px 이런 식으로 하면 진짜 두칸 내려가는 거라 1.5 or 2 배수 단위로 넣어준다. line-height는 행간이다.*/
+}
+.lst-bbs li a:hover {
+  text-decoration: underline;
+}
+.lst-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+.lst-gallery li {
+  padding: 5px 0;
+  width: 100px;
+}
+.lst-gallery li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .bnr {
   width: 400px;
@@ -115,4 +183,27 @@
   background: #7e4d4d;
 }
 
-/* font랑 text 관련은 글씨를 싸고 있는 겉에 있는 태그에 넣어주는게 제일 좋다. */
+.footer {
+  border-top: 1px solid #d7d7d7;
+  height: 100px;
+  /* padding: 10px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-foot a {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+.sns .lst-sns {
+  display: flex;
+}
+.lst-sns li {
+  margin-left: 20px;
+}
+.lst-sns a {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
