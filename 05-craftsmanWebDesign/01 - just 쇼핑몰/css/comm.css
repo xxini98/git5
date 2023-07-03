@@ -207,3 +207,47 @@
   height: 100px;
   align-items: center;
 }
+
+/* modal */
+.modal-dimmed {
+  /* fixed는 브라우저를 기준으로 한다.  */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.modal-box {
+  position: relative;
+  padding: 50px;
+  display: block;
+  text-align: center;
+  width: 50%;
+  height: 300px;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+}
+.modal-box h3 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.modal-box button {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  /* margin: -20px; */
+  background: #000;
+  border-radius: 50%;
+  border: none; 
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+}
