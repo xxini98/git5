@@ -1,3 +1,93 @@
-section {
-    background: #f8ffb7;
+@charset "utf-8";
+ 
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1.5;
+  color: #333;
+}
+
+.wrap { 
+    margin: 0 auto;
+    width: 1200px;
+    background: gray;
+}
+header::after {
+    /* 이렇게 사용하는 것을 매우매우 권장  */
+    content: '';
+    clear: both;
+    display: block;
+}
+header {
+    /* overflow: auto;   */
+    background: lightcoral;
+    padding: 20px 0;
+}
+header h1 {
+    float: left;
+}
+header nav { 
+    float: right;
+}
+header nav ul {
+    padding-top: 10px;
+    background: lightblue;
+}
+header nav ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+header nav li {
+    float: left;
+    margin-left: 30px;
+}
+main {
+    overflow: hidden;
+}
+main .cont {
+    float: left;
+    width: 30%;
+    height: 200px;
+    margin-right: 5%;
+    background: lightgreen;
+    border: 1px solid #000;
+}
+main .cont3 {
+    margin-right: 0;
+}
+
+/* footer {
+    overflow: hidden;
+    height: 100px;
+    background: lightsteelblue;
+}
+footer .foot {
+    float: left;
+    width: 30%;
+    height: 50px;
+    margin-right: 5%;
+    background: lightgoldenrodyellow;
+    border: 1px solid #000;
+}
+footer .foot3 {
+    margin-right: 0;
+} */
+
+footer {
+    height: 100px;
+    background: lightpink;
+}
+footer .foot1 {
+    float: left;
+}
+footer .foot3 {
+    float: right;
+    margin-top: -22px;
+}
+footer .foot2 {
+    text-align: center;
 }
