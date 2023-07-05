@@ -9,7 +9,12 @@
   line-height: 1.5;
   color: #333;
 }
-
+.clearfix::after {
+    /* 이렇게 사용하는 것을 매우매우 권장  */
+    content: '';
+    clear: both;
+    display: block;
+}
 .wrap { 
     margin: 0 auto;
     width: 1200px;
@@ -36,7 +41,7 @@ header nav ul {
     padding-top: 10px;
     background: lightblue;
 }
-header nav ul::after {
+header nav ul {
     content: '';
     clear: both;
     display: block;
@@ -90,4 +95,18 @@ footer .foot3 {
 }
 footer .foot2 {
     text-align: center;
+}
+
+.container li {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #bb5a5a;
+    background: #fbff00;
+}
+.container li:nth-child(3) {
+    clear: left;
+}
+.container li:nth-child(5) {
+    clear: left;
 }

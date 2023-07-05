@@ -111,8 +111,31 @@
         background: red;
       }
       body {
-        padding-top: 100px; 
-        padding-bottom: 100px;
+        padding-top: 100px;
+        padding-bottom: 200px;
+      }
+    </style>
+
+    <h2>가운데 정렬</h2>
+    <div class="box4">
+      <div class="item"></div>
+    </div>
+
+    <style>
+      .box4 {
+        position: relative;
+        height: 500px;
+        background: lightgray;
+      }
+      .box4 .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -100px;
+        background: lavender;
       }
     </style>
   </body>
