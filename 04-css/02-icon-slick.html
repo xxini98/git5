@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slick | css</title>
+    <link rel="stylesheet" href="./dist/slick/slick.css" />
+    <link rel="stylesheet" href="./dist/slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        line-height: 1.5;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>slick</h1>
+
+    <div class="slick2-slide">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1688410053610-42290a7267df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2129&q=80"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1688061838128-9635ad80c77e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://plus.unsplash.com/premium_photo-1673280731432-9cc09eb20fed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <style>
+      .slick2-slide {
+        position: relative;
+        width: 90%;
+        height: 100px;
+        margin: 0 auto;
+      }
+      .slick2-slide img {
+        width: 100%;
+      }
+      .slick-arrow::before {
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: black;
+      }
+      .slick-prev {
+        left: -18px;
+      }
+      .slick-next {
+        right: -20px;
+      }
+      .slick-next::before {
+        content: "\f105";
+      }
+      .slick-next:hover::before {
+        color: salmon;
+      }
+      .slick-arrow {
+        z-index: 100;
+        width: 40px;
+        height: 40px;
+        background: gray;
+        border-radius: 50%;
+      }
+      .slick-prev::before {
+        content: "\f104";
+      }
+      .slick-prev:hover::before {
+        color: salmon;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="./dist/slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slick2-slide").slick({
+          dots: true,
+        });
+      });
+    </script>
+  </body>
+</html>
