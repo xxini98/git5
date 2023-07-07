@@ -17,7 +17,7 @@
   </head>
   <body>
     <h1>background</h1>
-    <strong>background-color</strong>
+    <h2>background-color</h2>
     <div class="bg1">background color</div>
     <!-- 가로는 100%써도 되지만 높이는 대부분 px을 쓴다 -->
     <style>
@@ -29,6 +29,109 @@
         width: 100%;
         height: 500px;
         background-color: rgb(173, 255, 47, 0.5);
+      }
+    </style>
+
+    <h2>background-attachment</h2>
+    <div class="box2"></div>
+    <style>
+      .box2 {
+        height: 900px;
+        background-image: url("https://images.unsplash.com/photo-1601979031925-424e53b6caaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+        background-attachment: fixed;
+        background-size: 100% auto;
+      }
+    </style>
+
+    <h2>background-image</h2>
+    <div class="box1"></div>
+    <style>
+      .box1 {
+        height: 200vh;
+        border: 1px solid #000;
+        background-color: #fff;
+        background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 200px auto;
+      }
+    </style>
+
+    <h2>background-size</h2>
+    <div class="box box3"></div>
+    <br />
+    <div class="box box4"></div>
+    <style>
+      .box {
+        width: 500px;
+        height: 300px;
+        border: 1px solid #000;
+        background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+        background-repeat: no-repeat;
+      }
+
+      .box3 {
+        background-size: contain;
+        /* logo, image, icon 등 같이 잘리면 안되는 이미지 */
+      }
+      .box4 {
+        background-position: 0 -120px;
+        background-size: cover;
+        /* 배경 이미지 : 박스를 채우는 이미지 */
+      }
+    </style>
+
+    <h2>Sprite</h2>
+    <div class="img-g sprite1"></div>
+    <div class="img-g sprite2"></div>
+    <div class="img-g sprite3"></div>
+    <br>
+    <div class="img-g sprite4"></div>
+
+    <style>
+      .img-g { 
+        background-image: url(./images/image-sprite.png);
+        background-repeat: no-repeat;
+      }
+      .sprite1 {
+        width: 134px;
+        height: 132px;
+        background-position: 0 0;
+      }
+      .sprite2 {
+        width: 40px;
+        height: 38px;
+        background-position: -140px 0;
+      }
+      .sprite3 {
+        width: 40px;
+        height: 40px;
+        background-position: -140px -40px;
+      }
+      .sprite3:hover {
+        width: 40px;
+        height: 40px;
+        background-position: -140px -340px;
+      }
+      .sprite4 {
+        width: 30px;
+        height: 30px;
+        background-position: -200px 0;
+      }
+      .sprite4:hover {
+        width: 30px;
+        height: 30px;
+        background-position: -244px 0;
+      }
+      .sprite4:active {
+        width: 30px;
+        height: 30px;
+        background-position: -284px 0;
+      }
+      .sprite4:visited {
+        width: 30px;
+        height: 30px;
+        background-position: -320px 0;
       }
     </style>
   </body>

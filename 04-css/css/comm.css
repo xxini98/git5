@@ -109,4 +109,5 @@ footer .foot2 {
 }
 .container li:nth-child(5) {
     clear: left;
+    background: url() no-repeat 0 0;
 }
