@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive | css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        line-height: 1.5;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-responsive</h2>
+
+    <div class="box-g box1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <style>
+      .box-g div {
+        height: 300px;
+        background: lightpink;
+        border: 1px solid #000;
+      }
+      .box1 {
+        display: flex;
+      }
+      .box1 div {
+        flex-grow: 1;
+      }
+      /* desktop to mobile */
+      @media screen and (max-width: 600px) {
+        .box1 {
+          flex-direction: column;
+        }
+      }
+    </style>
+    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br />
+
+    <div class="box-g box2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <style>
+      /* mobile to desktop */
+      @media screen and (min-width: 600px) {
+        .box2 div {
+          float: left;
+          width: 33.33%;
+        }
+      }
+    </style>
+
+    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br />
+
+    <h2>layout</h2>
+    <div class="wrap">
+      <header class="box">
+        <h1>logo</h1>
+        <nav>Navigation Menu</nav>
+      </header>
+      <div class="container">
+        <div class="content box">content</div>
+        <div class="content box">content</div>
+        <div class="content box">content</div>
+      </div>
+      <footer class="box">
+        <h1>logo</h1>
+        <div class="copyright">copyright</div>
+        <div class="sns">sns</div>
+      </footer>
+    </div>
+
+    <style>
+      .wrap {
+        width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+      .box {
+        margin: 20px;
+        background: lightgray;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .content {
+        flex-grow: 1;
+        height: 300px;
+      }
+      footer {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+      }
+      @media screen and (max-width: 1200px) {
+        .wrap {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        header {
+            flex-direction: column;
+            height: auto;
+        }
+        .container, footer {
+            flex-direction: column;
+        }
+        .content {
+            height: auto;
+        }
+        footer {
+            flex-direction: column;
+            height: auto;
+        }
+      }
+    </style>
+  </body>
+</html>
