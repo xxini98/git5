@@ -45,24 +45,43 @@
   /* background: #a88b6f; */
   border-bottom: 3px solid #a88b6f;
 }
+/* gnb 마우스 오버 후  */
 .gnb .depth1:hover .depth2 {
   display: block;
+  max-height: 260px;
+  /* padding: 10px 0; */
+  border-bottom-width: 1px;
 }
 
 /* nav depth2 */
+/* gnb 마우스 오버 전  */
 .gnb .depth2 {
+  /* display: none; */
   position: absolute;
   top: 100px;
   left: 0;
   right: 0;
   z-index: 1000;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
   /* padding: 20px 0; */
   background: #ffffff;
-  border: 1px solid #eee ;
+  border-bottom: 1px solid #eee ;
   border-right: none;
+  transition: all 0.3s;
 }
-
+.gnb .depth2::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 5px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.gnb .depth1 > li:last-child .depth2::after {
+  display: none;
+}
 .gnb .depth1 > li:last-child .depth2 {
   border-right: 1px solid #eee;
 }
