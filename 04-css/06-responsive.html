@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive | css</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
@@ -13,6 +17,8 @@
         box-sizing: border-box;
         line-height: 1.5;
         color: #333;
+        /* 기본 폰트  */
+        font-family: "Noto Sans KR", sans-serif;
       }
     </style>
   </head>
@@ -98,7 +104,9 @@
         margin: 20px;
         background: lightgray;
       }
-
+      header h1 {
+        font-family: "Roboto", sans-serif;
+      }
       header {
         display: flex;
         justify-content: space-between;
@@ -125,18 +133,19 @@
       }
       @media screen and (max-width: 600px) {
         header {
-            flex-direction: column;
-            height: auto;
+          flex-direction: column;
+          height: auto;
         }
-        .container, footer {
-            flex-direction: column;
+        .container,
+        footer {
+          flex-direction: column;
         }
         .content {
-            height: auto;
+          height: auto;
         }
         footer {
-            flex-direction: column;
-            height: auto;
+          flex-direction: column;
+          height: auto;
         }
       }
     </style>
