@@ -138,5 +138,28 @@
         background: lavender;
       }
     </style>
+
+    <h2>transform | 가운데 정렬</h2>
+    <div class="box5">
+      <div class="item"></div>
+    </div>
+
+    <style>
+      .box5 { 
+        position: relative;
+        height: 500px;
+        background: lightgray;
+      }
+      .box5 .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20%;
+        height: 20%;
+        transform: translate(-50%, -50%);
+        background: blue;
+
+      }
+    </style>
   </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etc | css</title>
+  </head>
+  <body>
+    <h1>tooltip</h1>
+
+    <div class="tooltip-wrap">
+      tooltip 보기
+      <div class="tooltip-item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, commodi?
+      </div>
+    </div>
+
+    <style>
+      .tooltip-wrap {
+        position: relative;
+        margin: 100px;
+        display: inline-block;
+        font-size: 20px;
+        color: turquoise;
+        font-weight: bold;
+        background: red;
+      }
+      .tooltip-item {
+        position: absolute;
+        bottom: -150px;
+        right: 50%;
+        display: inline-block;
+        max-width: 100px;
+        /* word-wrap: break-all; */
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: normal;
+        color: white;
+        background: #000;
+        border-radius: 5px;
+        transform: translateX(-50%);
+      }
+    </style>
+  </body>
+</html>
