@@ -4,42 +4,173 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>etc | css</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        line-height: 1.5;
+        color: #000;
+      }
+    </style>
   </head>
   <body>
     <h1>tooltip</h1>
 
     <div class="tooltip-wrap">
-      tooltip 보기
-      <div class="tooltip-item">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, commodi?
-      </div>
+      tooltip 보기 00000 <br />
+      아녀어어어어어어어 tooltip 보기 00000 <br />
+      아녀어어어어어어어 tooltip 보기 00000 <br />
+      아녀어어어어어어어
+      <div class="item top">Top</div>
+      <div class="item bottom">bottom</div>
+      <div class="item left">left</div>
+      <div class="item right">right</div>
     </div>
 
     <style>
+      .item::after {
+        content: "";
+        position: absolute;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0) transparent transparent transparent;
+      }
+
+      .right {
+        position: absolute;
+        top: 50%;
+        right: -35%;
+        transform: translateY(-50%);
+      }
+      .right::after {
+        top: 50%;
+        left: -10px;
+        transform: rotate(90deg) translateX(-50%);
+      }
+
+      .left {
+        position: absolute;
+        top: 50%;
+        left: -35%;
+        margin-top: -12px;
+        /* transform: translateY(-50%); */
+      }
+      .left::after {
+        top: 50%;
+        right: -10px;
+        transform: rotate(-90deg) translateX(50%);
+      }
+
+      .bottom {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .bottom::after {
+        top: -35%;
+        left: 40%;
+        transform: rotate(180deg);
+      }
+
+      .top {
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        margin-left: -25px;
+        /* width 50px */
+      }
+      .top::after {
+        content: "";
+        position: absolute;
+        /* top: 100%; */
+        bottom: -10px;
+        left: 26px;
+        transform: translateX(-50%);
+        /* left: 40%; */
+        border-width: 5px;
+        border-style: solid;
+      }
+
       .tooltip-wrap {
+        display: inline-block;
         position: relative;
         margin: 100px;
-        display: inline-block;
         font-size: 20px;
         color: turquoise;
         font-weight: bold;
         background: red;
       }
-      .tooltip-item {
-        position: absolute;
-        bottom: -150px;
-        left: 50%;
+      .item {
         display: inline-block;
-        max-width: 100px;
-        word-wrap: break-all;
-        padding: 5px 10px;
+        width: 50px;
+        /* word-wrap: break-all; */
+        padding: 5px 0px;
         font-size: 12px;
         font-weight: normal;
+        text-align: center;
         color: white;
         background: #000;
         border-radius: 5px;
-        transform: translateX(-50%);
+        box-sizing: border-box;
+        /* transform: translateX(-50%); */
       }
     </style>
+
+    <h2>image style</h2>
+
+    <div class="image1">
+      <img
+        src="https://images.unsplash.com/photo-1689132248657-fc463108928f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+        alt=""
+      />
+    </div>
+
+    <style>
+      .image1 {
+        -webkit-mask-image: url(./images/w3logo.png);
+        mask-image: url(./images/w3logo.png);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+      }
+      .image1 img {
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        max-width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        filter: grayscale(100%);
+      }
+    </style>
+
+    <h2>mask</h2>
+    <div class="image2">
+      <!-- <img
+        src="https://images.unsplash.com/photo-1689132248657-fc463108928f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+        alt=""
+      /> -->
+    </div>
+
+    <style>
+      .image2 {
+        width: 263px;
+        height: 222px;
+        -webkit-mask-image: url(./images/w3logo.png);
+        mask-image: url(./images/w3logo.png);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: url("https://images.unsplash.com/photo-1689132248657-fc463108928f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80") no-repeat 0 0 / cover;
+      }
+
+    </style>
+    
+    <!-- img 태그는 운영요소 ex.쇼핑몰 마스크를 씌우는 거는 디자인 요소 이런 요소들은 background 요소  -->
   </body>
 </html>

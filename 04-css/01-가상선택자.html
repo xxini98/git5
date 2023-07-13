@@ -7,9 +7,9 @@
 
     <!-- head에 style을 넣어 *로 전체 선택하고 중괄호 후 list-style: none; 해줘야 한다.  -->
     <style>
-        * {
-            list-style: none;
-        }
+      * {
+        list-style: none;
+      }
     </style>
   </head>
   <body>
@@ -77,90 +77,112 @@
       } */
     </style>
 
-
-<!--     ul>li*4>a{공지사항 $} 이렇게 넣으면 아래처럼 완성됨 엘리먼트는 콜론을 :: 2개 사용한다 ::before의 경우에는 꼭 content를 아래에 줄 추가 해줘야 한다. -->
+    <!--     ul>li*4>a{공지사항 $} 이렇게 넣으면 아래처럼 완성됨 엘리먼트는 콜론을 :: 2개 사용한다 ::before의 경우에는 꼭 content를 아래에 줄 추가 해줘야 한다. -->
     <h2>가상 엘리먼트 선택자</h2>
     <ul class="list2">
-        <li><a href="#">공지사항 1</a></li>
-        <li><a href="#">공지사항 2</a></li>
-        <li><a href="#">공지사항 3</a></li>
-        <li><a href="#">공지사항 4</a></li>
+      <li><a href="#">공지사항 1</a></li>
+      <li><a href="#">공지사항 2</a></li>
+      <li><a href="#">공지사항 3</a></li>
+      <li><a href="#">공지사항 4</a></li>
     </ul>
     <style>
-        .list2 a::before {
-            content: 'before';
-        }
-        .list2 a::after {
-            content: 'after';
-        }
-        .list2 a {
-            color: red;
-        }
-        /* 가로 세로가 적용이 안되면 display를 block 처리 해준다. */
-        .list2 li::before {
-            content: '';
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: #000;
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-        .list2 li::after {
-            content: '';
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: blue;
-            border: 10px;
-            margin-left: 10px;
-        }
+      .list2 a::before {
+        content: "before";
+      }
+      .list2 a::after {
+        content: "after";
+      }
+      .list2 a {
+        color: red;
+      }
+      /* 가로 세로가 적용이 안되면 display를 block 처리 해준다. */
+      .list2 li::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+      .list2 li::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: blue;
+        border: 10px;
+        margin-left: 10px;
+      }
     </style>
 
     <ul class="lst3">
-        <li>menu1</li>
-        <li>menu2</li>
-        <li>menu3</li>
-        <li>menu4</li>
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
     </ul>
 
     <!-- display: flex는 세로 정렬을 가로 정렬로! -->
     <style>
-        .lst3 {
-            display: flex;
-        }
+      .lst3 {
+        display: flex;
+      }
 
-        .lst3 li::after {
-            content: '';
-            display: inline-block; 
-            width: 10px;
-            height: 10px;
-            background: blue;
-            border-radius: 50%;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        .lst3 li:last-child::after {
-            content: '';
-            display: none;
-        }
+      .lst3 li::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: blue;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .lst3 li:last-child::after {
+        content: "";
+        display: none;
+      }
 
-        .lst3::before {
-            content: '';
-            display: inline-block;
-            width: 5px;
-            height: 30px;
-            background: blue;
-            margin-right: 10px;
-        }
-        .lst3::after {
-            content: '';
-            display: inline-block;
-            width: 5px;
-            height: 30px;
-            background: blue;
-            margin-left: 10px;
-        }
+      .lst3::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 30px;
+        background: blue;
+        margin-right: 10px;
+      }
+      .lst3::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 30px;
+        background: blue;
+        margin-left: 10px;
+      }
+    </style>
+
+    <h2>button disabled</h2>
+    <input type="button" value="비활성화" class="button" disabled />
+
+    <style>
+      .button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
     </style>
   </body>
 </html>
