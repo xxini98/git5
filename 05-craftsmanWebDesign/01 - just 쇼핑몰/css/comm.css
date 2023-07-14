@@ -1,4 +1,18 @@
 @charset "UTF-8";
+:root {
+  --primary: #a88b6f;
+  --line: #d7d7d7;
+  --txt: #222328;
+  --w : #fff;
+  --b : #000;
+
+  --widthWrap : 1200px;
+  --slideHeight : 300px;
+  
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +20,11 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 1.5;
-  color: #222328;
+  color: var(--txt);
 }
 
 .wrap {
-  width: 1200px;
+  width: var(--widthWrap);
   margin: 0 auto;
 }
 .header {
@@ -43,7 +57,7 @@
 }
 .gnb .depth1 > li:hover > a {
   /* background: #a88b6f; */
-  border-bottom: 3px solid #a88b6f;
+  border-bottom: 3px solid var(--primary);
 }
 /* gnb 마우스 오버 후  */
 .gnb .depth1:hover .depth2 {
@@ -65,8 +79,8 @@
   overflow: hidden;
   max-height: 0;
   /* padding: 20px 0; */
-  background: #ffffff;
-  border-bottom: 1px solid #eee ;
+  background: var(--w);
+  border-bottom: 1px solid var(--line) ;
   border-right: none;
   transition: all 0.3s;
 }
@@ -83,7 +97,7 @@
   display: none;
 }
 .gnb .depth1 > li:last-child .depth2 {
-  border-right: 1px solid #eee;
+  border-right: 1px solid var(--line);
 }
 
 .gnb .depth2 a {
@@ -93,11 +107,11 @@
   /* padding: 30px 0; */
   /* 패딩값을 넣든가 아니면 height를 넣어서 line-height를 넣든가 그렇게 해라. */
   text-align: center;
-  background: #ffffff;
+  background: var(--w);
 }
 .gnb .depth2 > li > a:hover {
-  background: #a88b6f;
-  color: white;
+  background: var(--primary);
+  color: var(--w);
   /* border-bottom: 4px solid #a88b6f; */
 }
 .slide-wrap a, .slide-wrap img {
@@ -106,7 +120,7 @@
 .slide-wrap {
   position: relative;
   overflow: hidden;
-  height: 300px;
+  height: var(--slideHeight)
 }
 .lst-slide {
   position: absolute;
@@ -140,16 +154,16 @@
 .tabs-wrap .tab-item .tit {
   height: 50px;
   padding-top: 14px;
-  border-bottom: 2px solid #a88b6f;
-  background: #ffffff;
+  border-bottom: 2px solid var(--primary);
+  background: var(--w);
   text-align: center;
   font-size: 14px;
   box-sizing: border-box;
 }
 /* 활성화 tab */
 .tabs-wrap .on .tit {
-  background: #a88b6f;
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--w);
 }
 .tabs-wrap .tab-item .cont {
   display: none;
@@ -225,7 +239,7 @@
 .goto li {
   width: calc(50% - 5px);
   height: calc(50% - 5px);
-  background: #000;
+  background: var(--b);
 }
 .goto a {
   display: block;
@@ -234,7 +248,7 @@
 }
 
 .footer {
-  border-top: 1px solid #d7d7d7;
+  border-top: 1px solid var(--line);
   height: 100px;
   /* padding: 10px; */
   display: flex;
@@ -269,7 +283,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(0, 0, 0, 0.5);
+  background: rgb(var(--b), 0.5);
 }
 
 .modal-box {
@@ -294,10 +308,10 @@
   width: 50px;
   height: 50px;
   /* margin: -20px; */
-  background: #000;
+  background: var(--b);
   border-radius: 50%;
   border: none; 
-  color: #ffffff;
+  color: var(--w);
   font-size: 30px;
   cursor: pointer;
 }
