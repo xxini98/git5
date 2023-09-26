@@ -1,0 +1,562 @@
+@charset "UTF-8";
+@import 'variables', 'mixin', 'reset';
+
+// 공통
+$hdWidth: 12.5rem;
+$utilHeight: 2.5rem; // 이렇게 지정 페이지만 쓰는 변수는 이렇게 scss에서 써줘도 된다.
+// 개별로 구현 가능한 애들은 종속 시키지 말고 따로따로 써주기!
+
+// layout
+.wrap {
+    // display:flex일 경우 엄마가 100vh면 자식도 같이 100vh로 커진다. display :block은 자식한테도 따로 넣어줘야 한다.
+    position: relative;
+    display: flex;
+    height: 100vh;
+}
+#header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: $hdWidth;
+    padding: 40px 0;
+    background: $w;
+}
+#main {
+    width: calc(100% - $hdWidth);
+    padding-top: $utilHeight;
+    // flex-grow: 1;
+    // background: lightcoral;
+}
+
+@media screen and (max-width: 1440px) {
+    .wrap {
+        display: block;
+    }
+    #header {
+        position: relative;
+        width: 100%;
+        background: $w;
+        padding: 0;
+        .inner {
+            display: flex;
+            width: 100%;
+            height: 105px;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+// header
+#logo a {
+    display: block;
+    width: 150px;
+    height: 116px;
+    margin: 0 auto;
+    background: url(/images/logo1.png) 0 0 / contain no-repeat;
+    text-indent: -99999999px;
+}
+#gnb {
+    width: 100px;
+    margin: 60px auto 0;
+    // transform: translateX(15px);
+    .depth1 {
+        a {
+            display: block;
+            padding: 7px 20px;
+        }
+    }
+}
+.spot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    .spot-g {
+        display: flex;
+        justify-content: center;
+        a {
+            display: block;
+            padding: 5px;
+        }
+    }
+    .contact {
+        a {
+            position: relative;
+            font-size: 0.75rem;
+            &::before {
+                content: '';
+                @include posY;
+                left: 0;
+                width: 1px;
+                height: 12px;
+                background: #eee;
+            }
+            &:first-child::before {
+                display: none;
+            }
+        }
+    }
+    .sns {
+        a {
+            display: block;
+            width: 31px;
+            height: 29px;
+            padding: 0;
+            text-indent: -999999999px;
+        }
+        .facebook {
+            background: url(/images/sns3.png) no-repeat 0 0;
+        }
+        .twitter {
+            background: url(/images/sns4.png) no-repeat 0 0;
+        }
+        .instagram {
+            background: url(/images/sns5.png) no-repeat 0 0;
+        }
+    }
+}
+
+.util {
+    position: absolute;
+    top: 0;
+    left: $hdWidth;
+    right: 0;
+    height: 40px;
+    background: black;
+}
+
+@media screen and (max-width: 1440px) {
+    #logo a {
+        display: block;
+        width: 250px;
+        height: 50px;
+        margin-left: 10px;
+        background: url(/images/logo2.png) no-repeat 0 0;
+    }
+    #gnb {
+        width: auto;
+        margin: 0;
+        .depth1 {
+            display: flex;
+            a {
+                display: block;
+                line-height: 103px;
+                padding: 0 37px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .spot {
+        display: none;
+    }
+    .util {
+        position: static;
+        height: 50px;
+    }
+    #main {
+        width: 100%;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #logo a {
+        display: block;
+        width: 250px;
+        height: 50px;
+        margin-left: 10px;
+        background: url(/images/logo2.png) no-repeat 0 0;
+    }
+    #gnb {
+        width: auto;
+        margin: 0;
+        .depth1 {
+            display: flex;
+            a {
+                display: block;
+                line-height: 103px;
+                padding: 0 27px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .spot {
+        display: none;
+    }
+    .util {
+        position: static;
+        height: 50px;
+    }
+    #main {
+        width: 100%;
+        padding-top: 0;
+    }
+}
+// main
+
+// section
+.grid {
+    width: 100%;
+    height: calc(100vh - $utilHeight);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.box-g {
+    position: relative;
+    height: 100%;
+    padding: 30px 20px;
+    background: lightblue;
+    strong {
+        text-transform: capitalize;
+    }
+    .tit-big {
+        position: absolute;
+        bottom: -34px;
+        right: 5px;
+        font-weight: 900;
+        font-size: 100px;
+        letter-spacing: -3px;
+        color: rgba($w, 0.8);
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .grid {
+        height: calc(100vh - 155px);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .grid {
+        height: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .box-g {
+        height: 233px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .grid {
+        height: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .box-g {
+        height: 233px;
+    }
+}
+@media screen and (max-width: 774px) {
+    .grid {
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    // .box-g {
+    //     height: 233px;
+    // }
+}
+
+.box-1 {
+    // grid-column: 1 / span 3; 1번라인부터 3칸 먹어버려
+    grid-column: 1 / span 3;
+    // grid-column: 1/4;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    background: url(/images/pic1.jpg) no-repeat 50% 50% / cover;
+}
+.box-2 {
+    grid-row: 1/2;
+    grid-column: 4/6;
+    background: pink;
+}
+.box-3 {
+    background: lightblue;
+    i {
+        position: absolute;
+        bottom: -60px;
+        right: 10px;
+        font-size: 220px;
+        color: $w;
+    }
+    &::after {
+        // display: inline-block;
+        position: absolute;
+        bottom: -140px;
+        right: 0;
+        content: '\f2f1';
+        font-weight: 900;
+        font-family: 'Font Awesome 6 Free';
+        font-size: 220px;
+        color: $w;
+        animation: fa-spin 2s infinite linear;
+        @keyframes fa-spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+.box-4 {
+    background: rgba($prim1, 0.7);
+    background: url(/images/pic2.jpg) no-repeat 50% 50% / cover;
+}
+.box-5 {
+    background: rgba($prim1, 0.6);
+    background: url(/images/pic3.jpg) no-repeat 50% 50% / cover;
+}
+.box-6 {
+    grid-column: 2/4;
+    background: rgba($prim1, 0.5);
+}
+.box-7 {
+    background: rgba($prim1, 0.4);
+    background: url(/images/pic4.jpg) no-repeat 50% 50% / cover;
+}
+.box-8 {
+    background: rgba($prim1, 0.2);
+}
+.box-9 {
+    grid-column: 1/3;
+    background: rgba($prim1, 0.1);
+    background: url(/images/pic5.jpg) no-repeat 50% 50% / cover;
+}
+.box-10 {
+    background: rgba($prim3, 1);
+    background: url(/images/pic6.jpg) no-repeat 50% 50% / cover;
+}
+.box-11 {
+    background: rgba($prim3, 0.9);
+}
+
+@media screen and (max-width: 1280px) {
+    .box-1 {
+        height: auto;
+        grid-column: 1/4;
+        grid-row: 1/3;
+    }
+    .box-2 {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    .box-3 {
+        grid-column: 4/5;
+        grid-row: 2/3;
+        &::after {
+            // display: inline-block;
+            position: absolute;
+            bottom: -15px;
+            right: 50px;
+            content: '\f2f1';
+            font-weight: 900;
+            font-family: 'Font Awesome 6 Free';
+            font-size: 110px;
+            color: $w;
+            overflow: hidden;
+            animation: fa-spin 2s infinite linear;
+            @keyframes fa-spin {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    .box-4 {
+        grid-column: 1 / 2;
+        grid-row: 3 /4;
+    }
+    .box-5 {
+        grid-column: 2 / 3;
+        grid-row: 3 /4;
+    }
+    .box-6 {
+        grid-column: 3 / 5;
+        grid-row: 3 /4;
+    }
+    .box-7 {
+        grid-column: 1 / 3;
+        grid-row: 4 /5;
+    }
+    .box-8 {
+        grid-column: 3 / 4;
+        grid-row: 4/5;
+    }
+    .box-9 {
+        grid-column: 4/ 5;
+        grid-row: 4 /5;
+    }
+    .box-10 {
+        grid-column: 1 / 3;
+        grid-row: 5 /6;
+    }
+    .box-11 {
+        grid-column: 3 / 4;
+        grid-row: 5 /6;
+    }
+    .box-12 {
+        grid-column: 4 / 5;
+        grid-row: 5 /6;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .box-1 {
+        box-sizing: border-box;
+        grid-column: 1/4;
+        grid-row: 1/3;
+    }
+    .box-2 {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .box-3 {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        &::after {
+            // display: inline-block;
+            position: absolute;
+            bottom: -15px;
+            right: 50px;
+            content: '\f2f1';
+            font-weight: 900;
+            font-family: 'Font Awesome 6 Free';
+            font-size: 110px;
+            color: $w;
+            overflow: hidden;
+
+            animation: fa-spin 2s infinite linear;
+            @keyframes fa-spin {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    .box-4 {
+        display: none;
+    }
+    .box-5 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .box-6 {
+        grid-column: 2/4;
+        grid-row: 4/5;
+    }
+    .box-7 {
+        display: none;
+    }
+    .box-8 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .box-9 {
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+    .box-10 {
+        display: none;
+    }
+    .box-11 {
+        grid-column: 3/ 4;
+        grid-row: 5 /6;
+    }
+    .box-12 {
+        display: none;
+    }
+}
+@media screen and (max-width: 774px) {
+    .box-1 {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .box-2 {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .box-3 {
+        display: none;
+    }
+    .box-4 {
+        display: none;
+    }
+    .box-5 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .box-6 {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .box-7 {
+        display: none;
+    }
+    .box-8 {
+        display: none;
+    }
+    .box-9 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .box-10 {
+        display: block;
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+    .box-11 {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    .box-12 {
+        display: block;
+        grid-column: 2/3;
+        grid-row: 6/7;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    #header {
+        .inner {
+            display: block;
+        }
+    }
+    #logo a {
+        width: 150px;
+        height: 116px;
+        background: url(/images/logo1.png) 0 0 / contain no-repeat;
+    }
+    #gnb .depth1 {
+        position: relative;
+        display: block;
+        z-index: 1;
+        a {
+            margin: 0 auto;
+            width: 60%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            background: rgba(black, 0.7);
+        }
+    }
+    .util {
+        display: none;
+    }
+    .box-g {
+        display: none;
+    }
+    .grid {
+        display: block;
+    }
+    .box-1 {
+        display: block;
+        height: 100vh;
+        .tit-big {
+            display: none;
+        }
+    }
+}
+
+@import 'main', 'contents';

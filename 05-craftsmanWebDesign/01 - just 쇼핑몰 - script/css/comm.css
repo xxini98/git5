@@ -1,0 +1,338 @@
+@charset "UTF-8";
+:root {
+  --primary: #a88b6f;
+  --line: #d7d7d7;
+  --txt: #222328;
+  --w: #fff;
+  --b: #000;
+
+  --widthWrap: 1200px;
+  --slideHeight: 300px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1.5;
+  color: var(--txt);
+}
+
+.wrap {
+  width: var(--widthWrap);
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+.메인메뉴 {
+  display: flex;
+  align-items: center;
+}
+.메인메뉴 a {
+  display: block;
+  width: 200px;
+  height: 40px;
+}
+.gnb .depth1 {
+  display: flex;
+  position: relative;
+}
+.gnb .depth1 > li {
+  position: relative;
+}
+.gnb .depth1 > li > a {
+  display: block;
+  height: 100px;
+  padding: 0 50px;
+  line-height: 100px;
+  text-align: center;
+}
+.gnb .depth1 > li:hover > a {
+  /* background: #a88b6f; */
+  border-bottom: 3px solid var(--primary);
+}
+/* gnb 마우스 오버 후  */
+.gnb .depth1:hover .depth2 {
+  display: block;
+  max-height: 260px;
+  /* padding: 10px 0; */
+  border-bottom-width: 1px;
+}
+
+/* nav depth2 */
+/* gnb 마우스 오버 전  */
+.gnb .depth2 {
+  /* display: none; */
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  max-height: 0;
+  /* padding: 20px 0; */
+  background: var(--w);
+  border-bottom: 1px solid var(--line);
+  border-right: none;
+  transition: all 0.3s;
+}
+.gnb .depth2::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 5px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.gnb .depth1 > li:last-child .depth2::after {
+  display: none;
+}
+.gnb .depth1 > li:last-child .depth2 {
+  border-right: 1px solid var(--line);
+}
+
+.gnb .depth2 a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  /* padding: 30px 0; */
+  /* 패딩값을 넣든가 아니면 height를 넣어서 line-height를 넣든가 그렇게 해라. */
+  text-align: center;
+  background: var(--w);
+}
+.gnb .depth2 > li > a:hover {
+  background: var(--primary);
+  color: var(--w);
+  /* border-bottom: 4px solid #a88b6f; */
+}
+.slide-wrap a,
+.slide-wrap img {
+  display: block;
+}
+.slide-wrap {
+  position: relative;
+  overflow: hidden;
+  height: var(--slideHeight);
+}
+.lst-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* animation: slide-ani 3s alternate linear forwards infinite;
+  transform-origin: 50% 50%; */
+}
+/* @keyframes slide-ani {
+  0% {
+    top: 0;
+  }
+  30% {
+    top: 0;
+  }
+  33% {
+    top: -300px;
+  }
+  63% {
+    top: -300px;
+  }
+  66% {
+    top: -600px;
+  }
+  100% {
+    top: -600px;
+  }
+} */
+.contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+/* tab */
+.tabs-wrap {
+  position: relative;
+  display: flex;
+  width: calc(100% / 2 - 230px);
+}
+.tabs-wrap .tab-item {
+  width: 50%;
+}
+/* 비활성화 */
+.tabs-wrap .tab-item .tit {
+  height: 50px;
+  padding-top: 14px;
+  border-bottom: 2px solid var(--primary);
+  background: var(--w);
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+/* 활성화 tab */
+.tabs-wrap .on .tit {
+  background: var(--primary);
+  color: var(--w);
+}
+.tabs-wrap .tab-item .cont {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  /* background: #ca7878; */
+  height: 130px;
+}
+.tabs-wrap .on .cont {
+  display: block;
+}
+.lst-bbs {
+  padding-top: 10px;
+}
+.lst-bbs li {
+  display: flex;
+  align-items: center;
+}
+.lst-bbs li::before {
+  content: "";
+  margin-top: -2px;
+  margin-right: 5px;
+  width: 5px;
+  height: 5px;
+  background: red;
+  display: inline-block;
+}
+.lst-bbs li a {
+  display: block;
+  line-height: 2;
+  /* a태그는 인라인 태그라 line-height가 먹히지 않는다. 이럴 때에는 block으로 바꿔주고 조절해본다. 그리고 line-height의 경우에는 2px 이런 식으로 하면 진짜 두칸 내려가는 거라 1.5 or 2 배수 단위로 넣어준다. line-height는 행간이다.*/
+}
+.lst-bbs li a:hover {
+  text-decoration: underline;
+}
+.lst-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+.lst-gallery li {
+  padding: 5px 0;
+  width: 100px;
+}
+.lst-gallery li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bnr {
+  width: 400px;
+}
+.goto {
+  width: 365px;
+}
+.bnr a,
+.bnr img {
+  display: block;
+}
+
+.goto {
+  width: calc(100% / 2 - 230px);
+}
+.goto ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 180px;
+}
+
+.goto li {
+  width: calc(50% - 5px);
+  height: calc(50% - 5px);
+  background: var(--b);
+}
+.goto a {
+  display: block;
+  height: 100%;
+  background: #7e4d4d;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  height: 100px;
+  /* padding: 10px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-foot a {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+.sns .lst-sns {
+  display: flex;
+}
+.lst-sns li {
+  margin-left: 20px;
+}
+.lst-sns a {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+/* modal */
+.modal-dimmed {
+  /* fixed는 브라우저를 기준으로 한다.  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1111;
+  /* background: #00000098; */
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+.modal-dimmed.active {
+  /* display: flex; */
+  visibility: visible;
+  opacity: 1;
+}
+.modal-box {
+  position: relative;
+  padding: 50px;
+  display: block;
+  text-align: center;
+  width: 50%;
+  height: 300px;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+}
+.modal-box h3 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.modal-box button {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  /* margin: -20px; */
+  background: var(--b);
+  border-radius: 50%;
+  border: none;
+  color: var(--w);
+  font-size: 30px;
+  cursor: pointer;
+}

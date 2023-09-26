@@ -1,0 +1,9 @@
+.box {
+    display: block;
+}
+.box2 {
+    display: flex;
+    justify-content: center;
+    stroke-width: 2;
+    text-emphasis: none;
+}

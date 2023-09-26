@@ -1,0 +1,4 @@
+# github 제외 파일 이름
+
+node_modules
+*.log
