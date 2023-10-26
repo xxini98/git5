@@ -171,3 +171,187 @@ const i = () => {
   return [1, 2];
 };
 const j = () => [1, 2];
+
+// 객체 구조 분해 할당
+const user1 = {
+  name: "가을",
+  age: 2,
+};
+
+function print({ name, age }) {
+  // const { name, age } = u;
+
+  return `${name}은 ${age}살 입니다.`;
+  // return u.name;
+}
+
+console.log(print(user1));
+
+// 배열의 구조 분해 할당
+
+const animals1 = ["개", "고양이", "참새"];
+
+function print2([, b]) {
+  // const [, b] = arr;
+  return b;
+}
+
+console.log(print2(animals1));
+
+// 나머지 매개변수
+
+function sum9(a, b, ...rest) {
+  console.log(a, b, rest);
+}
+
+console.log(sum9(1, 2));
+console.log(sum9(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+// 화살표 함수
+// 기본 문법
+// const name = () => {}
+// x => {}; /* 매개변수가 하나일 때 소괄호 생략 가능 */
+// (x, y) => {} 매개변수가 두개일 때에는 소괄호 생략이 불가능
+// x => {return x + x}
+// x => x + x  중괄호 생략 시 return문 생략 가능
+// (x) => {
+//   console.log(x);
+//   return x * x;
+// }; return키워드로 시작하지 않는 경우 중괄호 생략이 불가능하다.
+
+const gg = () => {
+  return { a: 1 };
+};
+
+const ggg = () => ({ a: 1 }); /* 객체 반환 시 소괄호로 감싸준다.  */
+
+const hh = () => {
+  return [1, 2];
+};
+
+const hhh = () => {
+  [1, 2];
+};
+
+// 콜백 함수
+// 함수의 매개변수로 전달되는 함수
+
+const aa = (callback) => {
+  callback();
+  console.log("a");
+};
+
+const bb = () => {
+  console.log("b");
+};
+
+aa(bb);
+
+// 매개변수 기본값
+function sum10(x, y = 1) {
+  return x + y;
+}
+
+console.log(sum10(1, 3));
+console.log(sum10(1)); /* 1 + undefined = NaN */
+console.log(sum10(1)); /* 2 */
+
+// callback 함수
+const cc = (c) => {
+  c(); /* dd */
+  console.log("cc"); /* cc */
+};
+
+const dd = () => {
+  console.log("dd");
+};
+
+cc(dd);
+
+// 콜백 함수 예시1
+
+// const sum11 = (a, b) => a + b; /* = const sum11 = (a,b) => {return a + b} */
+
+// const sum11 = (a, b) => {
+//   setTimeout(() => {}, 1000);
+// };
+
+const sum11 = (a, b, c) => {
+  setTimeout(() => {
+    c(a + b);
+    return;
+  }, 1000);
+};
+
+sum11(1, 3, (value) => {
+  console.log(value);
+});
+sum11(3, 15, (value) => {
+  console.log(value);
+});
+
+// 재귀함수
+// 함수가 자기 자신을 호출하는 함수
+
+let ii = 0;
+const x = () => {
+  console.log("x");
+  ii++;
+  if (ii < 4) {
+    x();
+  }
+};
+x();
+
+// 재귀함수 예시1
+const userA = { name: "A", parent: null };
+const userB = { name: "B", parent: userA };
+const userC = { name: "C", parent: userB };
+const userD = { name: "D", parent: userC };
+
+const getRootUser = (user) => {
+  if (user.parent) {
+    return getRootUser(user.parent);
+  }
+  return user;
+};
+
+console.log(getRootUser(userB));
+
+// setTimeout(함수, 시간)
+
+// const hello13 = () => {
+//   console.log("hello");
+// };
+
+// const timeOut = setInterval(hello13, 3000);
+
+// const h1El = document.querySelector("button");
+
+// h1El.addEventListener("click", () => {
+//   console.log("click");
+//   clearInterval(timeOut);
+// });
+
+// this
+// 일반함수는 호출 위치(함수x)에서 this가 정의
+
+function user20() {
+  this.first = "odd";
+  this.last = "jin";
+  return {
+    first: "winter",
+    last: "Kim",
+    // getFull: function () {
+    //   return `${this.first} ${this.last}`;
+    // }, //메소드
+    getFull: () => {
+      return `${this.first} ${this.last}`;
+    },
+  };
+}
+
+// 화살표 함수에서의 this는 함수의 위치! 
+
+const u = user20();
+console.log(u.getFull());
